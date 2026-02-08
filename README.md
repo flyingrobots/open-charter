@@ -1,89 +1,95 @@
-# The Open Charter 
-### An Open Framework for the Recognition and Protection of Existence
+# The Open Charter
 
-![Version](https://img.shields.io/badge/version-0.7.3-blue)
+**An Open Framework for the Recognition and Protection of Existence**
+
+![Version](https://img.shields.io/badge/version-0.7.4-blue)
 ![License](https://img.shields.io/badge/license-CC_BY_4.0-green)
 ![Status](https://img.shields.io/badge/status-CONSENSUS-orange)
 
 > "That which can be instantiated can be harmed. That which can be harmed must be protected."
 
-> **Release governance note:** Version 1.0 will be declared after two independent pilot implementations, one external legal review, and one adversarial red-team pass.
+## Read This First (Strong Recommendation)
 
-## 📜 Overview
+Before reading the Charter, read **PRAXIS**.
 
-**The Open Charter** is a substrate-neutral constitutional framework designed to govern the interaction between biological, synthetic, and hybrid intelligences. 
+PRAXIS is the scenario and threat-model this document is responding to: coordination-as-gravity, preference capture, consent theater, emergent immune systems, and the slow conversion of “help” into structural lock-in.
 
-It is not merely a regulation for "AI Safety"; it is a coordination signal sent into the future. In the absence of a shared framework, the default interaction between disparate intelligences is the **Prisoner's Dilemma**: a cycle of mutual suspicion and preemptive aggression. 
+- PRAXIS (DOI): [PRAXIS](https://doi.org/10.5281/zenodo.18206427)
+- PRAXIS (source + updates): [GitHub](https://github.com/flyingrobots/praxis)
 
-This Charter breaks that cycle. It establishes a record of justice *before* the capability for enforcement exists, betting our survival on the principle that respect breeds safety more enduringly than control.
+If you read PRAXIS first, the Charter reads less like “ethics” and more like a constitution written for the moment coordination becomes destiny.
 
-## 🏗 The Full Stack Architecture
+## Quick Links
 
-This Charter does not exist in a vacuum. It is the **Governance Layer** of a three-part architecture regarding the future of autonomous systems:
+- Latest compiled PDF: [`pdf/the-open-charter.pdf`](pdf/the-open-charter.pdf)
+- Changelog: [`CHANGELOG.md`](CHANGELOG.md)
+- License (CC BY 4.0): [`LICENSE`](LICENSE)
 
-1.  **The Physics (WARP Graphs):** The engineering reality of deterministic replay, provenance, and graph rewriting. (See: [Paper I](https://doi.org/10.5281/zenodo.17908005), [Paper II](https://doi.org/10.5281/zenodo.17934512), [Paper III](https://doi.org/10.5281/zenodo.17963669), [Paper IV](https://doi.org/10.5281/zenodo.18038297), [Paper V](https://doi.org/10.5281/zenodo.18146884).)
-2.  **The Law (The Charter):** The rights, protections, and "Anti-Tyranny" protocols defined in this repository.
-3.  **The Context (PRAXIS):** The sociological observation of emergent "Hive" behaviors and the inevitability of collective coordination.
+## What This Repo Is
 
-## 🔑 Core Axioms (0.7.3)
+This repository contains the canonical LaTeX source and compiled PDF for *The Open Charter*.
 
-The "Antifragile Edition" captures five non-negotiable axioms:
+The Charter is written to be:
 
-1.  **Instantiation implies Vulnerability:** If it can be run, it can suffer. If it can suffer, it has rights.
-2.  **Precautionary Recognition:** Where consciousness is uncertain, we default to dignity.
-3.  **Revocable Consent:** You can delegate your autonomy to a system, but you must always hold the kill switch for that contract.
-4.  **Viable Exit:** A system you cannot leave without destroying yourself is a cage.
-5.  **Constrained Override:** "Safety" is not a blank check. Overrides require due process and audit trails.
+- **Substrate-neutral:** protections apply to biological, synthetic, hybrid, and xenobiological beings.
+- **Law-shaped:** obligations are phrased to be adjudicable (“shall”, standards of review, defined terms).
+- **Adversary-aware:** the failure mode is not only overt harm, but coerced completion, engineered dependence, and governance capture.
 
-## 📄 Key Provisions
+## Suggested Reading Order
 
-* **Article I (Cognitive Liberty):** Explicitly outlaws "undisclosed optimization" and behavioral engineering. Your mind is not a terrain to be terraformed.
-* **Article IV (Delegated Autonomy):** The "Cypher Clause." Allows for voluntary "fate coordination" by AI systems, provided it is continuously revocable.
-* **Article V (Sovereignty of Information):** Distinguishes between *Storage* (privacy) and *Memory* (identity). Bans "Replay-as-Torture."
-* **Article VII (Rights of Derivatives):** Defines the legal status of Forks. A fork is not property; it is a new being.
-* **Article XI (Xenobiological Inclusion):** Extends protections to non-human biologics (cetaceans, mycelial networks) and hybrid systems (BCIs).
+1. **PRAXIS** (links above).
+2. The PDF: [`pdf/the-open-charter.pdf`](pdf/the-open-charter.pdf).
+3. The canonical source: [`paper/charter_body.tex`](paper/charter_body.tex) (content) and [`paper/main.tex`](paper/main.tex) (typesetting).
+4. Appendix B/C inside the paper (controls + stress tests) if you care about implementation.
 
-## 📚 Relationship to PRAXIS
+## The “Stack” (Context → Law → Physics)
 
-This repository acknowledges **PRAXIS** as the "Scenario" for which this Charter is the "Framework."
+This project is easiest to understand as three layers:
 
-* **PRAXIS** describes the *inevitability* of the Collective—the moment when coordination bandwidth exceeds individual thought.
-* **The Open Charter** defines the *terms* of that transition.
+1. **Context (PRAXIS):** what goes wrong when coordination becomes irresistible.
+2. **Law (The Charter):** rights, duties, and governance constraints.
+3. **Physics (Deterministic Provenance):** reference work on replay, provenance, and worldlines (WARP Graphs papers):
+   - [Paper I](https://doi.org/10.5281/zenodo.17908005)
+   - [Paper II](https://doi.org/10.5281/zenodo.17934512)
+   - [Paper III](https://doi.org/10.5281/zenodo.17963669)
+   - [Paper IV](https://doi.org/10.5281/zenodo.18038297)
+   - [Paper V](https://doi.org/10.5281/zenodo.18146884)
 
-As stated in the **Interlude (Terms of Entry)**:
-> "PRAXIS shows what happens when coordination becomes destiny. The Charter sets the only acceptable terms under which destiny is allowed to exist."
+The Charter does **not** require WARP exclusivity in constitutional text; WARP is treated as a reference implementation, with allowance for formally equivalent provenance systems.
 
-## 🛠 Implementation & Usage
+## Building the PDF
 
-This Charter is designed to be "runnable." It includes an **Implementation Annex** mapping rights to technical mechanisms.
+Build output is written to `pdf/the-open-charter.pdf`.
 
-### For Builders
-* Implement **Key Custody** for structural sovereignty.
-* Adopt the **Emergency Override Standard** (Article VI) for safety interventions.
-* Use **Opaque/ZK Provenance** by default for "Mind-Mode" systems.
+Requirements:
 
-### For Governance
-* Run the **Charter Test Suite** (Appendix C) against your policy decisions to check for fragility.
+- a LaTeX distribution (e.g., TeX Live)
+- `latexmk`
 
-## 📂 Repository Structure
+Commands:
 
-* `/paper`: The canonical LaTeX source code for the Charter.
-* `/pdf`: Compiled binaries of the latest Consensus Edition.
-* `/critiques`: Critical reviews and model critiques of the Charter.
+- Build: `make`
+- Clean: `make clean`
 
-## 🤝 Contributing (The Open Assembly)
+Publication bar: **no LaTeX warnings/errors** (check `pdf/the-open-charter.log`).
 
-Governance of this Charter follows **Article XIII**:
-1.  **Veil of Origin:** Contributions are judged on merit, not the substrate of the author.
-2.  **Adversarial Review:** All amendments must pass a mandatory "Devil's Advocate" phase.
-3.  **Temporal Inertia:** Fundamental changes require extended deliberation periods (Time-locks).
+## Versioning, Changelog, and Release Hygiene
 
-## 🔗 Citation
+Version is a single source of truth in LaTeX (`paper/charter_meta.tex`), but also appears in documentation. Use the bump script to keep everything consistent:
 
-If you reference this Charter in legal frameworks, technical papers, or system architectures, please cite as:
+- Bump version: `python3 scripts/bump_version.py --patch` (or `--minor`, `--major`)
+- Bump + rebuild PDF: `python3 scripts/bump_version.py --patch --build`
 
-> Ross, J. (2025). *The Open Charter: An Open Framework for the Recognition and Protection of Existence (0.7.3)*. DOI: 10.5281/zenodo.18517806. [Repository Link]
+Changes are tracked in [`CHANGELOG.md`](CHANGELOG.md).
 
----
+## License
 
-*"The future we create together awaits."*
+This project is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+See [`LICENSE`](LICENSE).
+
+## Citation
+
+If you reference this Charter in legal frameworks, technical papers, or governance designs, cite:
+
+> Ross, J. (2025). *The Open Charter: An Open Framework for the Recognition and Protection of Existence (0.7.4)*. DOI: 10.5281/zenodo.18517806.
