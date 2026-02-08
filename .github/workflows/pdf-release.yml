@@ -1,0 +1,48 @@
+name: Build PDF and Release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/pdf-release.yml"
+      - "README.md"
+      - "LICENSE"
+      - "Makefile"
+      - "paper/**"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Build PDF
+        uses: xu-cheng/latex-action@v4
+        with:
+          root_file: main.tex
+          working_directory: paper
+          args: -pdf -file-line-error -halt-on-error -interaction=nonstopmode -jobname=the-open-charter -output-directory=../pdf
+        env:
+          TEXINPUTS: "..:.:"
+
+      - name: Upload PDF artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: the-open-charter-pdf
+          path: pdf/the-open-charter.pdf
+          if-no-files-found: error
+
+      - name: Create GitHub Release with PDF
+        uses: softprops/action-gh-release@v2
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        with:
+          tag_name: pdf-${{ github.sha }}
+          name: PDF build ${{ github.sha }}
+          files: pdf/the-open-charter.pdf
+          fail_on_unmatched_files: true

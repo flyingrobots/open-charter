@@ -1,0 +1,15 @@
+# LaTeX build artifacts
+.DS_Store
+*.aux
+*.bbl
+*.blg
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.pdf
+
+# Keep the compiled PDF (Makefile output) in-repo
+!pdf/*.pdf
