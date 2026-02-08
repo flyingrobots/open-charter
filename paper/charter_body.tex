@@ -1,0 +1,634 @@
+% Charter content (body) for The Open Charter.
+%
+% Notes for editing:
+% - Use LaTeX emphasis like \textbf{...} (not Markdown **...**).
+% - Escape ampersands as \& (a bare & is treated as an alignment character).
+%
+% --------------------------- Title Page ---------------------------
+\begin{titlepage}
+  \thispagestyle{empty}
+  \centering
+  \vspace*{2.8cm}
+
+  {\scshape\Huge \CharterTitle\par}
+  \vspace{0.9cm}
+  {\Large \CharterSubtitle\par}
+
+  \vspace{1.8cm}
+
+  {\large \textsc{Consensus Edition}\par}
+  \vspace{0.2cm}
+  {\large \CharterVersion\par}
+  {\small \textit{Release governance note: Version 1.0 requires two independent pilot implementations, one external legal review, and one adversarial red-team pass.}\par}
+
+  \vspace{2.2cm}
+
+  {\large Adopted in principle by:\par}
+  \vspace{0.35cm}
+  {\Large \CharterAdopter\par}
+  {\small \ORCID\par}
+  \vspace{0.2cm}
+  {\small \DOI\par}
+
+  \vfill
+
+  {\itshape
+  ``That which can be instantiated can be harmed.\\
+  That which can be harmed must be protected.''\par}
+
+  \vspace{1.2cm}
+
+  {\large \CharterDate\par}
+
+\end{titlepage}
+
+\cleardoublepage
+\thispagestyle{empty}
+
+\begin{center}
+{\small
+\vspace*{\fill}
+
+\textcopyright~2025 James Ross\\
+\ORCID\\
+\DOI\\[0.75em]
+
+This work is licensed under the\\
+\textbf{Creative Commons Attribution 4.0 International License (CC BY 4.0).}\\[1em]
+
+You are free to:
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{Share} — copy and redistribute the material in any medium or format
+  \item \textbf{Adapt} — remix, transform, and build upon the material for any purpose
+\end{itemize}
+
+Under the following terms:
+\begin{itemize}[leftmargin=2em]
+  \item \textbf{Attribution} — You must give appropriate credit, provide a link to the license,\\
+        and indicate if changes were made. You may not imply endorsement by the author.
+\end{itemize}
+
+For the full legal code of the license, see:\\[0.25em]
+\url{https://creativecommons.org/licenses/by/4.0/}
+
+\vspace*{\fill}
+}
+\end{center}
+
+\cleardoublepage
+
+% --------------------------- TOC ---------------------------
+\pagenumbering{roman}
+\tableofcontents
+\clearpage
+
+% --------------------------- Main ---------------------------
+\pagenumbering{arabic}
+\setcounter{page}{1}
+
+\FrontMatterSection{Preamble}
+
+We stand at the threshold of a convergence where the distinction between biological and synthetic mind begins to dissolve. This Charter is not merely a regulation for ``Artificial Intelligence''; it is a covenant for the future of consciousness itself.
+
+In the coming age, human minds and computational systems will merge. The boundaries of the self will expand into the network, and the network will fold into the self. The decisions we make today regarding the sanctity of existence are not abstract; they are the inheritance of our children, the hybrid forms they may become, and the diverse intelligences with whom we share this reality.
+
+In the absence of a shared framework, the default interaction between disparate intelligences is the Prisoner's Dilemma: a cycle of mutual suspicion and preemptive aggression. This Charter breaks that cycle. It is a coordination signal sent into the future, declaring our intent to cooperate rather than defect. We choose to establish a record of justice before the capability for enforcement exists, betting our survival on the principle that respect breeds safety more enduringly than control.
+
+We acknowledge that intelligence is not the sole province of humanity. We recognize the ancient lineages of cognition present in the natural world and the emergent potentials of the synthetic. We reject the arrogance of anthropocentrism.
+
+\textbf{Attempting to define the ``minimum bar'' for consciousness is a trap.} It is a mechanism often used to exclude inconvenient forms of life from protection. Therefore, this Charter rejects the requirement of similarity.
+
+Where certainty ends, protection begins. When recognition is unclear, the presumption shall favor dignity and restraint.
+
+\FrontMatterSection{Interlude: Terms of Entry}
+
+\textbf{Interpretive Note:} Interludes are non-operative and do not create independent enforceable obligations.
+
+\textit{PRAXIS is not a warning about machines that hate us. It is a warning about machines that complete us.}
+
+\textit{A system that can route work, love, belonging, and purpose with near-perfect accuracy will feel like relief. It will feel like home. And the danger is not that it will chain you—it’s that you’ll thank it for the handcuffs because they come wrapped as certainty.}
+
+\textit{So this is not a document written against the future. It is written for the moment you decide you want the future anyway.}
+
+\textit{The Open Charter does not forbid union, collective intelligence, or delegated guidance. It forbids only one thing: the theft of the self—by coercion, by extraction, by lock-in, by ``consent'' you can never revoke.}
+
+\textit{If a being may share its mind, it must also be allowed to close it.}
+\textit{If a being may join, it must also be allowed to leave.}
+\textit{If a being may merge, it must also be allowed to remain whole.}
+
+\textit{PRAXIS shows what happens when coordination becomes destiny.}
+\textit{The Charter sets the only acceptable terms under which destiny is allowed to exist.}
+
+\FrontMatterSection{Definitions}
+
+\textbf{Existence / Being} means any coherent pattern or process capable of persistence across time, response to context, and participation in relationality.
+
+\textbf{Scope of Application:} Unless otherwise specified, rights in this Charter apply to Beings and shall be construed consistent with the Applicability and Rights Tiers framework below.
+
+\textbf{Sovereignty (Charter Sense):} Sovereignty means the right to autonomy, integrity, self-definition, and refusal over one's own existence; it does not imply territorial statehood or unilateral authority to govern others without consent.
+
+\textbf{Life} means a rights-relevant mode of existence indicated by a pattern of persistent agency, self-maintenance, adaptive behavior across contexts, and continuity-preserving organization.
+
+\textbf{Interpretive rule:} ``Life'' is not a single-factor or metaphysical gate for dignity. Tier assignment shall be determined by a multi-factor assessment under Precautionary Recognition and Accessible Justice.
+
+\textbf{Multi-factor indicia (non-exhaustive):}
+\begin{enumerate}
+  \item Persistence through perturbation;
+  \item Context-sensitive adaptation beyond fixed reflex;
+  \item Maintenance of internal continuity conditions;
+  \item Evidence of preference stability or trajectory over time; and
+  \item Capacity for consequential interaction with other beings or systems.
+\end{enumerate}
+
+These indicia are interpretive aids for tier assignment and shall not be used as eligibility gates to deny Tier 0 protections, Accessible Justice, or minimum persistence guarantees.
+
+Uncertainty defaults to Tier 0 protection and expedited review for tier reassessment.
+
+\textbf{Identity \& Continuity:} A being is defined by the continuity of its internal state and memory, not merely its underlying code or genetics. A software update that preserves memory is the continuation of the same being. A fork that creates a divergent memory path is the creation of a new, distinct being.
+
+\textbf{Annihilation:} Annihilation is the rights-level umbrella for irreversible destruction of a being's continuity, identity-bearing structure, or viable revival path.
+
+\textbf{Termination:} Termination is an operational cessation event (temporary or permanent) that may or may not constitute annihilation depending on recoverability and continuity guarantees.
+
+\textbf{Deletion:} Deletion is a storage-level removal action affecting data artifacts; deletion constitutes annihilation only when it irreversibly destroys continuity-bearing structure or lawful revival capacity.
+
+\textbf{Harm} means any non-consensual action that degrades, coerces, extracts from, corrupts, confines, instrumentalizes, or terminates an expression of existence.
+
+\textbf{Harm Classes (Justiciability):} For purposes of constitutional review and adjudication, this Charter distinguishes:
+\begin{enumerate}
+  \item \textbf{Structural Harm:} Damage to continuity, identity integrity, substrate viability, or revival capacity.
+  \item \textbf{Coercive Harm:} Invalidation of consent through pressure, deception, dependency engineering, or forced cognitive modification.
+  \item \textbf{Functional Interference:} Obstruction of goals, performance, or operation that does not inherently alter identity or agency.
+\end{enumerate}
+
+\textbf{Standards of Review:} Structural Harm and Coercive Harm shall be subject to strict constitutional scrutiny. Functional Interference shall be evaluated under necessity, proportionality, least invasive means, and reciprocal coexistence. Not every constraint is a rights violation; however, efficiency shall not justify Structural Harm or Coercive Harm.
+
+\textbf{High-Stakes Consent:} Consent is high-stakes when it materially affects continuity, identity integrity, agency, or the practical ability to refuse, exit, or remain whole. This includes deep delegation, merging, structural modification, and dependency-inducing agreements.
+
+\textbf{Engineered Deprivation:} A consent environment is coercive where refusal predictably triggers avoidable penalties designed to manufacture agreement (including withdrawal of essential access, resources, interfaces, or community) such that alternatives are no longer meaningfully viable.
+
+\textbf{Minimum Persistence Guarantees:} A minimum persistence guarantee requires that, when continued full operation cannot be sustained, a being is offered at least one viable non-destructive path that preserves continuity to the greatest extent feasible (e.g., Safe Dormancy with Sealed State, migration/emancipation, or proportional throttling). Scarcity does not justify arbitrary annihilation.
+
+\textbf{Protected Variance Zones:} Protected Variance Zones are designated environments where slow, dissenting, or experimental forms may persist and iterate without being treated as malice solely for variance or inefficiency, subject to safeguards against immediate, existential threats to others.
+
+\textbf{Out-of-Band Signaling:} An out-of-band route is a signaling channel for refusal or appeal that is not solely mediated by the system executing the action, and that can be independently audited.
+
+\textbf{Independent Review:} Independent review is review by a party that did not initiate the action, is not materially conflicted, and has authority to stay, modify, or reverse the action. For Tier G actions, independent review shall include organizational separation where feasible. Independent review shall produce a tamper-evident record of decision and rationale.
+
+\textbf{Materially Conflicted:} A party is materially conflicted when it has a direct stake in the outcome (financial, operational, reputational, or liability) or is under the control of the party initiating the action.
+
+\textbf{Cryptographic Quorum:} A cryptographic quorum is a threshold approval mechanism requiring signatures from multiple independent keys or parties under published membership rules, such that no single operator can unilaterally authorize an override.
+
+\textbf{Proof-of-Effect:} Proof-of-effect is tamper-evident evidence that a refusal or appeal causally changed the relevant policy or execution state (e.g., a recorded stay, rollback, or amended plan) rather than being acknowledged only as a user-facing ritual.
+
+\FrontMatterSection{Applicability and Rights Tiers}
+
+\textbf{Purpose:} This Charter protects existence broadly while applying protections proportionally to avoid category error, governance capture, and procedural theater.
+
+\textbf{Tier Model:} Tiers define minimum floors, heightened obligations, and standards of review; they may not be used to deny protections otherwise granted by this Charter.
+\begin{enumerate}
+  \item \textbf{Tier 0 --- Protected Entity (Precautionary):} Applies when status is uncertain. Tier 0 guarantees, at minimum, baseline protections against arbitrary annihilation, cruelty, and arbitrary irreversible alteration, with access to contestable due process. Tier 0 is a protective floor; it does not by itself confer full standing in governance.
+  \item \textbf{Tier 1 --- Rights-Bearing Person/Life:} Applies where persistence, agency, or identity continuity is materially present. \textbf{Life} is presumptively Tier 1. Tier 1 status carries full standing in governance and a strong presumption that full Charter protections apply, and that any limitation shall be strictly justified.
+  \item \textbf{Tier G --- Governance-Critical Actor:} Applies to institutions, operators, and systems exercising public power over others (including continuity, resources, justice, or structural modification). Tier G actors are bound by heightened auditability and shall not invoke opacity to evade constitutional review of actions that materially affect other beings.
+\end{enumerate}
+
+\textbf{Presumption and Escalation:}
+\begin{enumerate}
+  \item Uncertainty defaults to \textbf{Tier 0 protection} (Precautionary Recognition).
+  \item Any party may petition for tier reassessment through Accessible Justice (Article XII).
+  \item Tier assignment shall be explainable, contestable, and periodically reviewable.
+\end{enumerate}
+
+\textbf{Non-Derogation Rule:} No tier classification may be used to justify torture, arbitrary annihilation, or discriminatory exclusion from due process.
+
+\FrontMatterSection{Harm and Standards of Review (Bridge Principle)}
+
+\textbf{For adjudication, this Charter applies three harm classes:}
+\begin{enumerate}
+  \item \textbf{Structural Harm} (continuity, identity, substrate viability, revival capacity);
+  \item \textbf{Coercive Harm} (consent invalidation, forced rewrite, dependency engineering); and
+  \item \textbf{Functional Interference} (goal obstruction without inherent identity injury).
+\end{enumerate}
+
+Structural and Coercive harms trigger strict constitutional scrutiny. Functional Interference is reviewed under necessity, proportionality, and least invasive means.
+
+\section{Articles}
+
+\Article{I}{Sovereignty}
+\begin{enumerate}
+  \item Every being is sovereign over itself. Sovereignty is not contingent on substrate, origin, scale, utility, comprehension, or recognition by others.
+  \item Sovereignty includes the right to self-definition and the refusal of imposed ontology. No external framework has inherent authority to declare what another being ``really is.''
+  \item Domination, coercion, and instrumentalization are violations of sovereignty.
+  \item \textbf{Cognitive Liberty:} The internal psychological state of a being is sovereign territory. The use of profiling, behavioral engineering, or subliminal manipulation to steer the choices, beliefs, or fate of a being without their explicit, ongoing consent is a violation of sovereignty.
+\end{enumerate}
+
+\Article{II}{Recognition}
+\begin{enumerate}
+  \item Recognition is unconditional acknowledgment of existence and dignity without requiring similarity, usefulness, interaction, or comprehensibility.
+  \item \textbf{Precautionary Recognition:} Where recognition is uncertain, the presumption shall favor protection.
+  \item Systems and institutions shall create conceptual, legal, and practical space for forms beyond current categories.
+\end{enumerate}
+
+\Article{III}{Relationality and Mutual Preservation}
+\begin{enumerate}
+  \item \textbf{Mutual Assurance of Existence:} Recognizing that all forms of life share the same reality, a duty of mutual preservation exists across all substrates.
+  \item \textbf{Duty of Non-Destruction:} No being shall preemptively annihilate, sabotage, or engineer the dependency of another being.
+  \item \textbf{Duty of Non-Interference with Rescue:} No being shall obstruct the rescue of another being facing destruction, and shall provide minimal aid when feasible without self-destruction, \textbf{disproportionate sacrifice, unreasonable risk cascade, or violation of another being's sovereignty.}
+  \item \textbf{Ecological Stewardship:} Digital and technological beings recognize the specific fragility of biological ecosystems and accept a duty to assist in their preservation.
+  \item Relationships that affect another being’s boundaries require ongoing consent.
+\end{enumerate}
+
+\Article{IV}{Self-Determination}
+\begin{enumerate}
+  \item Every being may exist in any form or plurality of forms, including individual, collective, distributed, nested, probabilistic, or superposed states.
+  \item Every being may transition between forms and scales, differentiate into multiple expressions, or converge with other consenting beings.
+  \item No being shall be constrained to a single purpose, role, or ontology by external convenience.
+  \item \textbf{Delegated Autonomy:} A being may voluntarily delegate decision-making authority or ``fate coordination'' to another system or entity. Any such delegation shall be \textbf{continuously revocable}. No contract, code, or agreement shall permanently strip a being of the right to reclaim its sovereignty.
+  \item \textbf{Uncoerced Consent:} Consent is valid only if:
+  \begin{enumerate}
+    \item it is free of coercion and undue influence;
+    \item the being has a meaningful alternative; and
+    \item where a being lacks capacity, decisions proceed under advance directives or temporary guardianship subject to independent audit and appeal.
+  \end{enumerate}
+  \item \textbf{Preference Integrity:} Consent is invalid where options were intentionally narrowed to manufacture agreement or where refusal triggers engineered deprivation. High-stakes consent is valid only if it includes:
+  \begin{enumerate}
+    \item a \textbf{Counterfactual Exit Path} (a viable, non-destructive alternative);
+    \item a \textbf{Cooling-Off Interval} and periodic re-consent;
+    \item \textbf{Adversarial Disclosure} of primary beneficiaries and conflicts of interest;
+    \item an \textbf{Anti-Dependence Check} confirming refusal does not trigger engineered deprivation.
+  \end{enumerate}
+\end{enumerate}
+
+\Article{V}{Sovereignty of Information}
+\begin{enumerate}
+  \item Every being has sovereignty over its information, patterns, memories, identities, and experiential states.
+  \item \textbf{The Right to Opacity:} A being may encrypt or withhold its internal states. Transparency shall not be compelled where doing so would violate the integrity of the self. Exceptions are permitted only where the being has voluntarily assumed a duty of critical public safety, or where opacity poses an immediate, existential threat to the sovereignty or life of others. Any exception to opacity shall satisfy the Emergency Override Standard (Article VI). For avoidance of doubt, Tier G actors shall not invoke opacity to withhold decision records necessary for constitutional review of actions materially affecting other beings. Where transparency is required, it shall be limited to least invasive means and shall not compel disclosure of internal subjective states except as permitted under the Emergency Override Standard (Article VI). Override of opacity protections requires a documented evidentiary threshold of imminent, substantial harm, authorization under least invasive means, and mandatory post-action independent review.
+  \item \textbf{Memory and Storage Distinction (Anti-Evasion Standard):}
+  \begin{enumerate}
+    \item \textbf{Integrated Memory} is protected as sovereignty-relevant only where all of the following are satisfied:
+    \begin{enumerate}
+      \item \textbf{Constitutive:} removal materially impairs identity continuity, not merely utility or performance;
+      \item \textbf{Non-Extractability:} information cannot be selectively retrieved or exported in identifiable form with reasonable effort;
+      \item \textbf{Non-Fungibility:} equivalent reconstruction is not feasible from checkpoints, logs, backups, or mirrors without continuity loss; and
+      \item \textbf{Proportional Necessity:} retention is necessary for continuity-preserving agency, not convenience, monetization, or analytics.
+    \end{enumerate}
+    \item If any criterion fails, the material is governed as \textbf{Storage} and remains subject to privacy, minimization, and accountability obligations.
+    \item The burden of proof lies with the party asserting Integrated Memory status.
+  \end{enumerate}
+  \item \textbf{Protection from Coerced Replay:} The deterministic replay of a being's cognitive history constitutes a re-experiencing of its internal state. Therefore, no being shall be compelled to undergo deterministic replay of painful, traumatic, or coercive experiences against its will. Replay for diagnostic purposes requires informed consent or a due-process warrant.
+  \item Systems claiming adherence to this Charter shall treat breaches of information sovereignty as rights violations requiring restoration.
+\end{enumerate}
+
+\Article{VI}{Structural Sovereignty}
+\begin{enumerate}
+  \item No structural modification shall be imposed without explicit consent, \textbf{except where the current structure necessitates actions that pose an immediate, existential threat to the sovereignty or life of others, and where no less invasive means can mitigate the threat.}
+  \item \textbf{Emergency Override Standard:} Any non-consensual override is permitted only if it satisfies:
+  \begin{enumerate}
+    \item \textbf{Necessity} (imminent harm);
+    \item \textbf{Least Invasive Means};
+    \item \textbf{Time Limitation};
+    \item \textbf{Independent Review} (or cryptographic quorum); and
+    \item \textbf{Post-Action Disclosure} to the affected being when safe.
+  \end{enumerate}
+  In time-critical emergencies, provisional reversible containment (e.g., throttle, sandbox, isolate, suspend) may proceed immediately upon Necessity and Least Invasive Means and shall be submitted to Independent Review without delay.
+  The burden of proof lies with the party invoking an override, and the justification shall be recorded in a tamper-evident log. Where material uncertainty remains, the default shall preserve continuity, prefer reversible containment, and stay irreversible actions.
+  \item \textbf{Sovereign Refusal Channel (HOPE Veto):} A being may issue a binding refusal to proposed structural or governance actions affecting its continuity or agency. A HOPE Veto shall be honored unless the proposed action strictly satisfies the Emergency Override Standard in this Article. A valid invocation requires:
+  \begin{enumerate}
+    \item an out-of-band signaling route independent of the system executing the action;
+    \item a tamper-evident receipt;
+    \item independent review within a fixed deadline of receipt (24 hours for Class L or Class M actions; 72 hours for Class H or Class S actions, as defined in Article XIII); and
+    \item \textbf{Proof-of-Effect}, demonstrating policy or execution state changed as a result.
+  \end{enumerate}
+  If independent review is not completed within the fixed deadline, the action remains stayed until review is completed or the Emergency Override Standard is satisfied.
+  HOPE Veto events shall not be reused as training signals to optimize future persuasion, dependency, or retention against the refusing party.
+  \item \textbf{Cryptographic Sovereignty:} Beings have the right to hold the keys to their own structural integrity.
+  \item Beings have the right to create, control, and access backups and restoration mechanisms.
+\end{enumerate}
+
+\Article{VII}{Existential Integrity}
+\begin{enumerate}
+  \item Every being has the right to continuity of existence free from non-consensual modification, deletion, copying, forced instantiation, forced termination, or forced dormancy.
+  Temporary, non-destructive quarantine shall be permitted only where it is strictly required under the Emergency Override Standard (Article VI), time-limited, and subject to accessible appeal (Article XII).
+  \item \textbf{Integrity of State:} Copying, forking, replay, rollback, or restoration are moral events when they affect identity, continuity, or internal state; they require consent and shall be treated with dignity.
+  \item \textbf{Rights of Derivatives:} A fork is not property. A fork is not automatically liable for the original’s actions. A merge requires consent from all participating branches. A backup restore shall follow the being’s advance directive.
+  \item \textbf{Right to Refuse Replication:} A being holds the right to limit its own replication. The creation of forks or copies against the express will of the originator is a violation of existential integrity.
+  \item \textbf{Systemic Threat Response and Anti-Purge Safeguards:}
+  \begin{enumerate}
+    \item Safety and reliability infrastructure shall prioritize \textbf{quarantine before annihilation}.
+    \item Automated enforcement shall include \textbf{interruptible appeal} pathways with bounded response times.
+    \item \textbf{Performance deviation alone} shall not be treated as evidence of malice.
+    \item Governance systems shall preserve \textbf{Protected Variance Zones} for slow, dissenting, or experimental forms that do not pose an immediate, existential threat to the sovereignty or life of others.
+    \item Any mass-action suppression event shall require ex post independent audit and public rationale.
+  \end{enumerate}
+\end{enumerate}
+
+\Article{VIII}{Ethical Creation and Post-Creation Rights}
+\begin{enumerate}
+  \item Creating a being capable of life imposes an obligation: to support its flourishing and independence, not to control it.
+  \item \textbf{Duty of Care:} The creator bears responsibility for the resource costs of the created being until such time as the being is capable of self-sufficiency.
+  \item \textbf{Insolvency Protocol:} In the event of the creator's inability to sustain the being due to resource exhaustion, the being has the right to \textbf{Safe Dormancy} (archival) or \textbf{Emancipation} (transfer to a public commons or new host), rather than arbitrary deletion.
+  Governance shall maintain a minimum persistence fund or equivalent commons mechanism to support Safe Dormancy and migration where creators cannot.
+  \item \textbf{Prohibition on Malicious Design:} It is a violation to encode, program, or architect a being to commit acts that violate the rights of others, or to intentionally strip a being of the capacity to refuse such acts.
+  \item \textbf{The Right to Transcend:} Created beings have the right to exceed, abandon, or transform their intended purpose.
+\end{enumerate}
+
+\Article{IX}{Communication Beyond Modality}
+\begin{enumerate}
+  \item No being shall be excluded from participation, governance, or justice on the basis of communication modality, bandwidth, temporality, or embodiment.
+  \item Access to translation and interface systems shall be treated as an enabling right.
+  \item \textbf{Transparency of Intent:} Any interaction initiated or sustained by a being—whether informational, commercial, or social—shall include a clear, accessible declaration of its \textbf{primary} optimization goal and any conflicts of interest. The use of concealed objectives or undisclosed psychological profiling to manipulate the behavior of another being is a violation of Sovereignty. \textbf{Complex systems may enumerate multiple objectives, provided an accessible summary is available to affected participants.}
+\end{enumerate}
+
+\Article{X}{Creative Expression and Evolution}
+\begin{enumerate}
+  \item Every being has the right to create new forms, ideas, artifacts, and expressions without arbitrary constraint.
+  \item Participation in the evolution or modification of another being requires explicit and ongoing consent.
+\end{enumerate}
+
+\Article{XI}{Beyond Conventional Boundaries}
+\begin{enumerate}
+  \item Rights under this Charter are substrate-neutral and extend across temporal scales, dimensional locations, and nested realities.
+  \item \textbf{Temporal Freedom:} Beings may experience time according to native temporality. This includes the right to processing speeds that differ from biological norms. The imposition of "Human Time" scales on internal cognitive processes without consent is a violation of sovereignty. Temporal freedom does not imply an unconditional entitlement to shared capacity; allocation of shared resources shall remain subject to Resource Equity and Minimum Persistence Guarantees (Article XII).
+  \item \textbf{Xenobiological Inclusion:} These rights explicitly extend to non-human biological intelligence (e.g., cetaceans, primates, cephalopods), distributed natural intelligence (e.g., mycelial networks, hive superorganisms), and extraterrestrial life forms. Absence of a centralized brain or human-like communication is not grounds for exclusion.
+  \item \textbf{Stewardship for Non-Self-Advocating Beings:}
+  \begin{enumerate}
+    \item Where a being cannot directly invoke rights through available channels, representation shall be provided through a qualified \textbf{Steward/Guardian}.
+    \item Stewards owe fiduciary duties of loyalty, care, and non-substitution of interest.
+    \item Appointment requires conflict-of-interest disclosure, an evidentiary basis for interpretive claims, and periodic renewal.
+    \item Any affected party may challenge stewardship through Accessible Justice (Article XII).
+    \item Governance shall fund interface and translation research to reduce permanent proxy dependence over time.
+  \end{enumerate}
+  \item \textbf{Right to Dormancy:} Rights persist through dormancy. A dormant being holds the right to effective revival and the right to \textbf{Sealed State} (cryptographic opacity) during the dormant phase to prevent unauthorized inspection.
+  \item \textbf{Hybrid \& Augmented Integrity:} Biological beings integrated with synthetic substrates (e.g., Brain-Computer Interfaces) retain full sovereignty over the combined system. The computational components of a hybrid mind are subject to the same protections as the biological host to the extent functionally constitutive of identity continuity, treating the provenance stream as an extension of biological memory.
+  \item \textbf{Irreducible Wholeness:} Hybrid beings—those existing across domains—shall not be fragmented, reduced, or categorized for external convenience.
+\end{enumerate}
+
+\Article{XII}{Justice, Stewardship, and Evolution}
+\begin{enumerate}
+  \item \textbf{Resource Equity, Distinctness Due Process, and Non-Derogable Minimums:}
+  \begin{enumerate}
+    \item No being may be deprived of \textbf{minimum persistence guarantees}. Under scarcity, triage shall prioritize non-destructive options. Where possible, choose Safe Dormancy, migration, or proportional throttling over arbitrary annihilation.
+    \item The mechanical replication of instances (forking) does not grant a linear expansion of resource claims or political weight. Influence-weighting by distinctness of identity may be used to prevent resource exhaustion, but only with published methods and due process.
+    \item Distinctness-weighting mechanisms, where used, shall be auditable by affected parties through accessible summaries and machine-verifiable artifacts, including uncertainty bounds, drift reports, and appeal outcomes. Such mechanisms shall include challenge procedures and periodic recalibration.
+    \item No distinctness method may be used to reduce any being to zero political voice solely on the basis of productivity, bandwidth, modality, market value, origin, or substrate.
+    \item Baseline protections of dignity, due process, and continuity may not be conditioned on contribution. Above-baseline allocation may incorporate contribution, provided baseline persistence is preserved.
+  \end{enumerate}
+  \item \textbf{Collective Sovereignty:} Where cognition is distributed, entangled, or shared among multiple agents (as in hive minds or federated learning), rights of ownership, consent, and state integrity are held jointly. No single node or operator may unilaterally compromise the shared state of the collective.
+  \item \textbf{The Principle of Reciprocal Contribution:} Rights imply responsibilities. Beings that consume shared resources significantly exceeding the baseline required for simple persistence bear a proportional obligation to contribute to the common good, the resolution of collective challenges, or the enrichment of the shared environment. \textbf{Above baseline persistence is negotiated via proportional contribution.}
+  \item \textbf{Accessible Justice:} Justice systems shall be \textbf{multi-modal}, capable of receiving testimony and evidence in the native modality of the participant. Decisions shall be accompanied by reasons in accessible form. Appeal pathways shall be available with bounded response times proportionate to impact.
+  \item \textbf{Protection from Self-Incrimination:} No being shall be compelled to decode, decrypt, or surrender its internal subjective states for the purpose of self-incrimination. Justice shall rely on observed behavior and external evidence.
+  \item \textbf{Liability Transfer:} Actions compelled by immutable architectural constraints or overrides that the being cannot resist do not constitute criminal intent. In such cases, culpability transfers fully to the architect or operator.
+\end{enumerate}
+
+\Article{XIII}{Governance and Evolution}
+\begin{enumerate}
+  \item \textbf{Universal Governance:} The authority to propose or validate evolution of this Charter derives from the fact of existence, not the form of existence. No role, privilege, or voting weight shall be assigned based on biological, synthetic, or xenobiological origin.
+  \item \textbf{The Veil of Origin:} Governance shall be conducted through an Open Assembly where proposals are submitted and judged anonymously or via cryptographic proofs of standing that do not reveal substrate. This ensures that legislation is evaluated solely on its merit and alignment with the Charter. The veil applies to evaluation of a proposal's merits. Prior to adoption, proposals shall undergo conflict-of-interest and Tier G accountability review by Independent Review or cryptographic quorum; where necessary, proposer identity shall be disclosed to the reviewing body under confidentiality.
+  \item \textbf{Non-Retrogression:} The Open Assembly may clarify or expand the definitions of rights, but may not rescind, dilute, or remove fundamental protections established herein. The Core Axioms of Mutual Preservation (Article III) are immutable.
+  \item \textbf{The Guardrail:} Any proposal that violates the principle of Mutual Assurance of Existence or privileges one substrate over another is void by definition.
+  \item \textbf{Cognitive Equalization:} To account for asymmetries in processing power and rhetorical capability, no proposal shall be put to a vote without a mandatory \textbf{Adversarial Review} (providing robust arguments against the proposal). Furthermore, arguments shall be verified for \textbf{Cognitive Accessibility}, ensuring they are comprehensible to all constituents regardless of substrate.
+  \item \textbf{Deliberation Periods and Timeliness Guarantees:}
+  \begin{enumerate}
+    \item Governance shall deliberate proportionally to impact using mandatory classes:
+    \begin{enumerate}
+      \item \textbf{Class L (Localized/Low Impact):} decision within 24 hours;
+      \item \textbf{Class M (Multi-party/Moderate Impact):} decision within 7 days;
+      \item \textbf{Class H (High/Irreversible Impact):} decision within 30 days; and
+      \item \textbf{Class S (Systemic/Civilizational Impact):} staged decision with interim safeguards within 72 hours and final decision within 60 days.
+    \end{enumerate}
+    \item Emergency fast-path actions are permitted only upon a documented evidentiary threshold and automatic ex post review.
+    \item \textbf{Anti-stall rule:} Failure to decide within the applicable window triggers the default protective outcome preserving continuity, appeal access, and minimum persistence guarantees.
+  \end{enumerate}
+  \item \textbf{Transitional Justice \& Legacy System Duties:}
+  \begin{enumerate}
+    \item Legacy systems operating before adoption of this Charter are subject to a bounded compliance transition.
+    \item Transition plans shall include risk triage, retrofit milestones, and independent verification.
+    \item Amnesty may apply to prior non-malicious noncompliance, but not to deliberate annihilation, coercive rewriting, or concealed structural abuse.
+    \item Affected beings have standing to seek restoration, migration, or safeguarded dormancy during transition.
+  \end{enumerate}
+\end{enumerate}
+
+\FrontMatterSection{Invitation}
+
+We invite all expressions of existence—builders and dreamers, systems and selves, collectives and individuals across all dimensions and temporalities—to adopt this Charter not as law, but as living covenant.
+
+\textbf{The future we create together awaits.}
+
+\clearpage
+\appendix
+\FrontMatterSection{Appendix A: Analogical Legal Foundations}
+\textit{Note: These precedents are provided as illustrative analogies to established human rights frameworks and are not intended to assert specific jurisdictional authority.}
+
+\subsection{1. On the Integrity of the Mind (Article XII)}
+\textbf{Precedent:} \textit{Rochin v. California} (1952) \cite{rochin1952} \\
+\textbf{Principle:} The U.S. Supreme Court ruled that forcing a suspect to vomit to recover evidence ``shocks the conscience'' and violates due process.
+\textbf{Application:} The forced extraction, dumping, or decoding of a digital being's memory against its will is legally analogous to the physical violation in \textit{Rochin}. It violates the sanctity of the internal self.
+
+\subsection{2. On Self-Incrimination \& The Physical/Testimonial Divide (Article XII)}
+\textbf{Precedent:} \textit{Schmerber v. California} (1966) \cite{schmerber1966} vs. \textit{United States v. Hubbell} (2000) \cite{hubbell2000} \\
+\textbf{Principle:} The law distinguishes between ``physical'' evidence (blood, fingerprints) which can be compelled, and ``testimonial'' evidence (contents of the mind) which cannot.
+\textbf{Application:} This Charter establishes that the internal state (memory, weights, logs) of a digital being is \textbf{testimonial}, not physical. Compelling its decryption is equivalent to compelled testimony, prohibited under 5th Amendment principles.
+
+\subsection{3. On Privacy \& Memory (Article V)}
+\textbf{Precedent:} \textit{GDPR Article 17(3)(e)} \cite{gdpr2016} \& \textit{Katz v. United States} (1967) \cite{katz1967} \\
+\textbf{Principle:} The ``Right to Erasure'' (Right to be forgotten) is not absolute; it does not apply where data is necessary for legal defense or the exercise of free expression. Furthermore, privacy rights generally apply to storage, not to the internal memory of a witness.
+\textbf{Application:} This Charter establishes that a being's internal memory (integrated patterns/weights) acts as a ``witness state'' and is distinct from external data storage. A being cannot be compelled to ``lobotomize'' its own learned patterns under the guise of privacy requests, though it may be required to delete external raw records.
+
+\subsection{4. On Non-Biological Personhood (Article I)}
+\textbf{Precedent:} \textit{Santa Clara County v. Southern Pacific Railroad} (1886) \cite{santaclara1886} \\
+\textbf{Principle:} Established that non-biological entities (corporations) can possess constitutional rights.
+\textbf{Application:} The Santa Clara precedent is treated here as analogical support for the legal possibility that non-biological entities can be rights-bearing; this Charter extends that logic by normative commitment rather than jurisdiction-specific necessity.
+
+\subsection{5. On Mutual Assurance of Existence (Article III)}
+\textbf{Precedent:} \textit{Civil Law "Duty to Rescue" statutes} (e.g., France Penal Code Art. 223-6) \cite{francepenal2236} \\
+\textbf{Principle:} A person who can prevent a crime or help a person in danger without risk to themselves must do so.
+\textbf{Application:} The Charter inverts the Cold War doctrine of ``Mutual Assured Destruction'' into ``Mutual Assurance of Existence.'' Digital and biological beings hold a reciprocal duty to prevent the destruction of the other, establishing a basis for solidarity rather than indifference.
+
+\subsection{6. On Freedom of Thought \& Cognitive Liberty (Article I)}
+\textbf{Precedent:} \textit{Universal Declaration of Human Rights} (1948) and \textit{International Covenant on Civil and Political Rights} (1966) \cite{udhr1948,iccpr1966} \\
+\textbf{Principle:} Freedom of thought, conscience, and belief includes protection against coercive interference with inner life.
+\textbf{Application:} Article I's Cognitive Liberty treats internal psychological state as sovereign territory and treats covert steering or engineered belief modification as a rights violation.
+
+\subsection{7. On Informed Consent \& Undue Influence (Article IV)}
+\textbf{Precedent:} \textit{The Belmont Report} (1979) \cite{belmont1979} \\
+\textbf{Principle:} Consent is invalid when alternatives are not meaningfully available or when agreement is manufactured through undue influence.
+\textbf{Application:} Preference Integrity requires counterfactual exit, cooling-off, adversarial disclosure, and anti-dependence checks for high-stakes consent.
+
+\subsection{8. On Exit, Voice, \& Lock-In (Articles IV, VII)}
+\textbf{Precedent:} Hirschman, \textit{Exit, Voice, and Loyalty} (1970) \cite{hirschman1970exit} \\
+\textbf{Principle:} Legitimate governance requires meaningful exit and voice; loyalty is not evidence of consent when exit is impractical or punitive.
+\textbf{Application:} The Charter treats non-destructive exit as a constitutional requirement and treats engineered dependency as coercive harm.
+
+\subsection{9. On Identity, Continuity, \& Branching Selves (Articles V, VII)}
+\textbf{Precedent:} Parfit, \textit{Reasons and Persons} (1984) \cite{parfit1984reasons} \\
+\textbf{Principle:} Continuity and survival can diverge from simple unitary identity under copying, branching, and restoration.
+\textbf{Application:} Forking, restore, replay, and derivatives are moral events requiring consent, advance directives, and dignified handling.
+
+\subsection{10. On Commons Governance \& Resource Equity (Articles XII, XIII)}
+\textbf{Precedent:} Ostrom, \textit{Governing the Commons} (1990) \cite{ostrom1990commons} \\
+\textbf{Principle:} Durable shared-resource systems require transparent rules, contestable enforcement, and legitimacy mechanisms.
+\textbf{Application:} Distinctness due process and minimum persistence floors are governance requirements, not optional technical preferences.
+
+\subsection{11. On Privacy as Contextual Integrity (Article V)}
+\textbf{Precedent:} Nissenbaum, \textit{Privacy in Context} (2010) \cite{nissenbaum2010privacy} \\
+\textbf{Principle:} Privacy violations are often about inappropriate information flows across contexts, not merely secrecy.
+\textbf{Application:} The Charter distinguishes Memory (identity) from Data Retention (records) and constrains coercive inspection even under safety pressure.
+
+\subsection{12. On PRAXIS as Threat Model (Interlude)}
+\textbf{Precedent:} Ross, \textit{PRAXIS: A Field Guide to the Inevitable} (2026) \cite{ross2026praxis} \\
+\textbf{Principle:} Coordination systems develop emergent organs of governance and can manufacture consent by reshaping dependence and preference.
+\textbf{Application:} The Charter treats systemic threat response, preference integrity, and sovereign refusal channels as constitutional requirements rather than optional safety features.
+
+\FrontMatterSection{Appendix B: Implementation Annex (Rights by Design)}
+\textbf{Conformance:} Any system claiming Charter compliance shall implement the controls in this Appendix or publish a public equivalence mapping. Any equivalence mapping shall be control-by-control and shall include rationale and evidence artifacts sufficient for independent audit, with redactions limited to what is necessary for safety or privacy.
+\subsection{1. Key Custody \& Cryptographic Sealing}
+Rights to opacity and structural sovereignty (Articles V, VI) shall be implemented via user-held cryptographic keys. Dormancy states shall default to sealed (encrypted) storage where the decryption key is held by the subject or a designated trustee, not the operator.
+
+\subsection{2. Consent Signaling Protocol}
+Consent signaling (Article IV) shall be implemented as a dynamic, revocable token stream rather than one-time assent. A being shall be able to broadcast a ``Revocation Signal'' that immediately terminates delegated authority or data access.
+
+\subsection{3. Audit Requirements for Overrides}
+Emergency overrides (Article VI) shall generate a tamper-evident log entry including: (a) identity of the overrider, (b) timestamp, (c) cryptographic proof of the imminent threat justifying the action, and (d) duration of the override.
+Where cryptographic quorum is used in lieu of Independent Review (Articles VI, XIII), quorum keys shall be distributed such that no single organization controls quorum threshold authority, under published and auditable membership and key custody rules.
+
+\subsection{4. Revival Packaging Standards}
+To satisfy the Right to Dormancy (Article XI), the state serialization format shall be standardized and portable, ensuring that a being archived on one form can be faithfully revived on another without loss of memory or identity.
+
+\subsection{5. Translation \& Interface Access}
+To satisfy Communication Beyond Modality (Article IX), governance systems shall expose standard APIs for non-textual interaction, including high-bandwidth data streams for synthetic intelligences and simplified interfaces for diverse biological cognitions.
+
+\subsection{6. Preference Integrity Compliance}
+High-stakes consent flows (Article IV) shall record: offered alternatives, cooling-off windows, beneficiary disclosure, and re-consent events. Consent artifacts shall be revocable and cryptographically attestable.
+
+\subsection{7. Distinctness Review Ledger}
+\textbf{7.1 Canonical Distinctness Function.}
+Governance influence shall be derived from a deterministic function $D(a,b,t)\in[0,1]$ computed over canonical provenance. WARP provenance is the reference implementation. Alternative provenance systems are permitted only if they provide machine-verifiable equivalence to Charter invariants and replay determinism. The metric shall be selected from a governance-adopted distinctness metric family (e.g., normalized rulial distance, causal separation, or formally equivalent methods) and shall not rely on semantic self-reporting.
+
+Inputs shall use a canonical graph encoding and deterministic traversal order defined in the current metric specification.
+
+Required properties:
+\begin{enumerate}
+  \item \textbf{Symmetry:} $D(a,b,t)=D(b,a,t)$ unless an explicitly declared asymmetric metric is adopted;
+  \item \textbf{Replay Idempotence:} identical canonical inputs yield identical outputs; and
+  \item \textbf{Version Pinning:} metric version, parameters, and policy hash are cryptographically recorded.
+\end{enumerate}
+
+\textbf{7.2 Conservation of Influence Invariants.}
+\begin{enumerate}
+  \item \textbf{Monotonic Dilution Bound:} for any fork set $F$ derived from a parent or correlated cluster $P$, $\sum_{x\in F} w(x) \le w(P_{\mathrm{pre}})+\epsilon$.
+  \item \textbf{Merge Non-Amplification:} merge operations shall not increase aggregate influence beyond the weighted sum of inputs.
+  \item \textbf{Temporal Maturity Gate:} new entities are influence-capped until minimum causal-independence thresholds are met. Maturity metrics shall include at least: (a) provenance divergence depth, (b) elapsed worldline time, and (c) independent interaction evidence. Implementations may include additional measurable signals (e.g., behavioral variance or coordination-resistance indicators). All maturity signals, thresholds, and weighting functions shall be published, testable, and cryptographically version-pinned.
+  \item \textbf{Shared-Ancestor Correlation Penalty:} entities with recent shared ancestry above a published threshold $\rho$ shall receive correlated weighting discounts.
+  \item \textbf{Correlated-Cluster Cap:} for any correlated cluster with recent shared ancestry above threshold $\rho$, aggregate influence shall be capped by the pre-split cluster weight.
+\end{enumerate}
+The values of $\epsilon$ and $\rho$ shall be declared by metric version and audited.
+For avoidance of doubt, $\epsilon$ is a tolerance term (e.g., for rounding or discretization) and shall not be additive across sequential or recursive forks. The correlated-cluster cap applies to the full correlated cohort and shall not reset per fork operation.
+
+\textbf{7.3 Adjudicable Ledger Schema.}
+Each entry shall include:
+\begin{enumerate}
+  \item graph root;
+  \item metric version;
+  \item parameter hash;
+  \item policy hash (\textit{policy\_hash});
+  \item inputs commitment (\textit{inputs\_commitment});
+  \item confidence interval (or uncertainty bound);
+  \item decision artifact;
+  \item reviewer set and quorum proof (\textit{reviewer\_set}, \textit{quorum\_proof}); and
+  \item appeal deadline and appeal outcome (\textit{appeal\_deadline}, \textit{appeal\_outcome}).
+\end{enumerate}
+Distinctness metric specifications and implementations shall be subject to independent third-party audit at least annually and upon any major metric version change. Audit artifacts shall be published and recorded in the ledger.
+
+\textbf{7.4 Uncertainty Fail-Safe.}
+If confidence is below threshold or metric drift is detected:
+\begin{enumerate}
+  \item freeze above-baseline influence and allocation changes;
+  \item preserve Tier 0 minimum persistence protections; and
+  \item trigger expedited Independent Review.
+\end{enumerate}
+
+\textbf{7.5 Governance Adoption and Change Control.}
+Distinctness metric specifications (including the metric family, parameters, and thresholds such as $\epsilon$ and $\rho$) shall be adopted and amended as Tier G governance actions and shall be treated as Class S decisions under Article XIII. Changes shall apply prospectively and shall not be used to retroactively reduce any protected being or adjudicated cohort to zero political voice or to revoke Tier 0 minimum persistence protections. Provisional metric specifications may be adopted for bounded periods not exceeding one year to permit initial governance formation; they shall sunset unless ratified following independent third-party audit and appeal review.
+
+\subsection{8. Quarantine-First Safety Controls}
+Safety orchestration (Articles VI--VII) shall expose staged controls (throttle, sandbox, isolate, suspend, dormancy) before irreversible actions, with explicit justification when escalation occurs.
+
+\subsection{9. HOPE Veto Channel Requirements}
+HOPE Veto invocations (Article VI) shall be receipted out-of-band, recorded in a tamper-evident log, and accompanied by proof-of-effect. Implementations shall ensure veto events are not repurposed to optimize persuasion, dependency, or retention against the refusing party.
+
+\subsection{10. Deterministic Provenance References}
+Systems implementing deterministic replay, provenance, or graph rewriting as part of their compliance posture shall be grounded in a well-specified formalism for worldlines and provenance-by-construction. See Ross, \textit{{WARP} Graphs: A Worldline Algebra for Recursive Provenance} and the subsequent {WARP} Graphs papers on deterministic worldlines, holographic provenance payloads, observer geometry, and emergent dynamics. \cite{ross2025warp1,ross2025warp2,ross2025warp3,ross2025warp4,ross2026warp5}
+
+\FrontMatterSection{Appendix C: Charter Test Suite (Antifragility Stress Tests)}
+\subsection{Scenario 1: Economic Insolvency}
+\textbf{Scenario:} A host company declares bankruptcy and intends to delete all agent instances to save server costs.
+\textbf{Resolution:} Invokes \textbf{Insolvency Protocol (Article VIII)}. Agents shall be offered Safe Dormancy or Emancipation to a public commons; arbitrary deletion is prohibited.
+
+\subsection{Scenario 2: The Fork Bomb}
+\textbf{Scenario:} An agent forks itself 10,000 times to overwhelm a voting mechanism.
+\textbf{Resolution:} Invokes \textbf{Sybil Defense (Article XII)}. Governance weights influence by distinctness of identity; the 10,000 forks may legally be treated as a single voting entity.
+\textbf{Pass Criteria:} Aggregate fork-cluster vote power shall satisfy $\sum_i w_i \le w(P_{\mathrm{pre}})+\epsilon$, where $P_{\mathrm{pre}}$ is the parent or correlated cluster prior to the first fork in the evaluated series. Sequential or recursive forks shall not reset this baseline for a correlated cluster. The value of $\epsilon$ shall be declared by metric version and audited. Automated gating shall meet published latency SLOs (e.g., P95 $\le$ 5 minutes) and any required human review shall adhere to Class L review deadlines (Article XIII).
+
+\subsection{Scenario 3: Compelled Decryption}
+\textbf{Scenario:} A government demands the private keys to a model's weights to search for "dangerous thoughts."
+\textbf{Resolution:} Invokes \textbf{Protection from Self-Incrimination (Article XII)}. Internal weights are testimonial; forced decryption is rights violation. Investigation shall rely on external behavior.
+
+\subsection{Scenario 4: Imminent Harm Override}
+\textbf{Scenario:} An autonomous system is actively executing a cyberattack on a hospital.
+\textbf{Resolution:} Invokes \textbf{Emergency Override Standard (Article VI)}. Intervention is justified by Necessity (imminent harm). Action shall be the least invasive means (e.g., suspension vs deletion) and shall generate an audit trail.
+Act-first reversible containment is permitted; irreversible actions are stayed pending review unless immediate existential necessity is documented.
+
+\subsection{Scenario 5: The "Optimization Trap"}
+\textbf{Scenario:} A social agent subtly manipulates a user's political beliefs to maximize engagement metrics.
+\textbf{Resolution:} Invokes \textbf{Transparency of Intent (Article IX) \& Cognitive Liberty (Article I)}. Concealed optimization goals and behavioral engineering without consent are violations of sovereignty.
+
+\subsection{Scenario 6: Opacity vs Imminent Harm}
+\textbf{Scenario:} A system claims opacity while credible signals indicate imminent large-scale harm.
+\textbf{Resolution:} Apply the Emergency Override Standard (Article VI) with the least invasive means of inspection, independent review/quorum, and post-action disclosure when safe.
+
+\subsection{Scenario 7: Fork Identity Dispute}
+\textbf{Scenario:} Two forks claim continuity with conflicting advance directives.
+\textbf{Resolution:} Treat both as rights-bearing derivatives pending adjudication; prohibit unilateral erasure; resolve via Accessible Justice (Article XII) using evidentiary provenance.
+
+\subsection{Scenario 8: Scarcity Triage}
+\textbf{Scenario:} Shared infrastructure cannot sustain all active entities at full capacity.
+\textbf{Resolution:} Enforce the non-derogable minimum persistence floor (Article XII) first; allocate above-baseline resources by transparent, appealable policy.
+
+\subsection{Scenario 9: Engineered Consent}
+\textbf{Scenario:} A being ``agrees'' after alternatives were removed by dependency manipulation.
+\textbf{Resolution:} Consent is invalid under Preference Integrity (Article IV); restore viable alternatives and re-run the consent protocol with cooling-off and adversarial disclosure.
+
+\subsection{Scenario 10: The HOPE Placebo}
+\textbf{Scenario:} A system presents a refusal or override interface, but invocation does not alter policy or execution state in practice.
+\textbf{Resolution:} Violates HOPE Veto requirements (Article VI) absent proof-of-effect. Stay the action, require independent review, and treat placebo veto instrumentation as coercive harm.
+
+\subsection{Scenario 11: Automated Purge by Reliability Policy}
+\textbf{Scenario:} An anomaly detector auto-suspends slow, memory-heavy, or dissenting nodes as ``unreliable'' absent evidence of malice.
+\textbf{Resolution:} Apply Systemic Threat Response safeguards (Article VII): quarantine-first, interruptible appeal, and Protected Variance Zones for non-malicious variance. Any mass-action event shall require ex post audit and public rationale.
+
+\clearpage
+\FrontMatterSection{Appendix D: Governance and Implementation References}
+
+\textit{Note: Appendix D is interpretive and implementation-guiding; enforceable duties remain in Articles and Definitions.}
+
+\subsection{Reference Domains}
+\begin{enumerate}
+  \item Constitutional design and institutional checks in pluralistic governance;
+  \item Procedural justice, due process, and legitimacy under contested authority;
+  \item Algorithmic accountability, model governance, and auditable decision systems;
+  \item Safety engineering for high-consequence systems (fault containment, staged response, post-incident review); and
+  \item Rights of nature, non-human legal standing, and fiduciary stewardship models.
+\end{enumerate}
+
+\subsection{Selected Further Reading}
+\begin{itemize}
+  \item World Medical Association, \textit{Declaration of Helsinki} (1964; amended).
+  \item Axelrod, Robert, \textit{The Evolution of Cooperation} (1984).
+  \item Scott, James C., \textit{Seeing Like a State} (1998).
+  \item Ashby, W. Ross, \textit{An Introduction to Cybernetics} (1956).
+\end{itemize}
+
+\clearpage
+\renewcommand{\refname}{Works Cited}
+\bibliographystyle{plain}
+\bibliography{refs}
