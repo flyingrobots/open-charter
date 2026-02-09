@@ -6,6 +6,21 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
+## [0.8.1] - 2026-02-08
+
+### Added
+- Phase 1 “good standing” definition and hardship-waiver path for Signatory Council participation (Article XIV).
+- Explicit Phase 1 Signatory Council voting thresholds keyed to impact class (quorum + simple majority for Class L/M; 2/3 for Class H/S) (Article XIV).
+
+### Changed
+- Founding Assembly eligibility baseline now defaults to all signatories in good standing, reducing bootstrapping ambiguity while preserving published membership criteria for additions (Article XIV; Appendix B \S 7.5).
+
+### Fixed
+- Reduced infinite-regress surface in governance bootstrapping by making Founding Assembly membership non-circular by default (Article XIV; Appendix B \S 7.5).
+
+### Removed
+- (none)
+
 ## [0.8.0] - 2026-02-08
 
 ### Added
