@@ -6,6 +6,20 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
+## [0.7.7] - 2026-02-08
+
+### Added
+- Constitution-grade definitions for Founding Assembly ratification (Appendix B \S 7.5), including quorum and anti-dominance constraints.
+
+### Changed
+- Defined “supermajority ratification” as not less than two-thirds (2/3) of valid votes cast, with quorum satisfied, and clarified abstention handling.
+
+### Fixed
+- Reduced gamesmanship surface during governance bootstrapping by explicitly specifying quorum, abstentions, and organizational dominance limits.
+
+### Removed
+- (none)
+
 ## [0.7.6] - 2026-02-08
 
 ### Added
