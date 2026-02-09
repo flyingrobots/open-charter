@@ -1,7 +1,7 @@
 cff-version: 1.2.0
 message: "If you use this work, please cite it as below."
 title: "The Open Charter"
-version: 0.7.5
+version: 0.7.6
 doi: 10.5281/zenodo.18517806
 authors:
   - family-names: "Ross"

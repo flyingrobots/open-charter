@@ -6,6 +6,23 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
+## [0.7.6] - 2026-02-08
+
+### Added
+- Founding distinctness bootstrapping clause (“Founding Metric Convention”) for initial adoption of metric family + baseline parameters (Appendix B \S 7.5).
+- Tier reassignment guardrails to reduce “indicia as gates” drift: no single indicium is necessary/sufficient, Tier 0 floor preserved, written reasons + appeal access required (Definitions).
+- Minimum Persistence Fund funding/reporting framework (Tier G proportional contributions + public solvency/disbursement reporting) (Article VIII).
+
+### Changed
+- Integrated Memory “Non-Fungibility” test now focuses on continuity/identity degradation rather than being defeated by the mere existence of checkpoints/backups (Article V).
+
+### Fixed
+- Reduced governance-capture risk by separating founding adoption from steady-state metric changes (still Class S after sunset) (Appendix B \S 7.5).
+- Eliminated overfull/underfull LaTeX warnings after the wording updates.
+
+### Removed
+- (none)
+
 ## [0.7.5] - 2026-02-08
 
 ### Added
