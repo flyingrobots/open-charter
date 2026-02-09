@@ -6,6 +6,25 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
+## [0.7.8] - 2026-02-08
+
+### Added
+- Explicit Independent Review completion deadlines for Emergency Overrides (Article VI), harmonized to governance impact classes (Article XIII).
+- Scenario 12: Systemic Infrastructure Collapse (Appendix C).
+
+### Changed
+- Preamble language tightened to avoid unnecessary metaphysical attack surface while preserving the coordination framing.
+- Xenobiological Inclusion clause de-enumerated (removed example lists) to reduce political-dismissal risk while keeping substrate-neutral scope (Article XI).
+- Insolvency Protocol extended with systemic infrastructure failure guidance (Article VIII).
+- Distinctness due-process language now explicitly binds conformance claims to Appendix B, Section 7 (Distinctness Review Ledger) or an equivalence mapping (Article XII).
+
+### Fixed
+- Reduced the chance that implementers miss Sybil-defense invariants by making the Appendix B distinctness controls discoverable from the core Articles (Article XII).
+- Eliminated “without delay” ambiguity by adding a concrete post-action review deadline to the Emergency Override Standard (Article VI).
+
+### Removed
+- (none)
+
 ## [0.7.7] - 2026-02-08
 
 ### Added
