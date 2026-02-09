@@ -123,6 +123,8 @@ def main(argv: list[str]) -> int:
     charter_meta_path = repo_root / "paper" / "charter_meta.tex"
     readme_path = repo_root / "README.md"
     critique_path = repo_root / "critiques" / "gpt-5_2-extra-high.md"
+    notice_path = repo_root / "NOTICE"
+    citation_cff_path = repo_root / "CITATION.cff"
     changelog_path = repo_root / "CHANGELOG.md"
 
     charter_meta = _read_text(charter_meta_path)
@@ -155,6 +157,16 @@ def main(argv: list[str]) -> int:
     if critique_path.exists():
         updated_critique, critique_hits = _replace_exact(_read_text(critique_path), old_version, new_version)
 
+    notice_hits = 0
+    updated_notice = None
+    if notice_path.exists():
+        updated_notice, notice_hits = _replace_exact(_read_text(notice_path), old_version, new_version)
+
+    citation_hits = 0
+    updated_citation = None
+    if citation_cff_path.exists():
+        updated_citation, citation_hits = _replace_exact(_read_text(citation_cff_path), old_version, new_version)
+
     if not changelog_path.exists():
         raise RuntimeError("CHANGELOG.md not found (expected at repo root)")
     updated_changelog, changelog_inserted = _ensure_changelog_entry(_read_text(changelog_path), new_version, today)
@@ -165,6 +177,10 @@ def main(argv: list[str]) -> int:
     print(f"- README.md: replaced {readme_hits} occurrence(s)")
     if critique_path.exists():
         print(f"- critiques/gpt-5_2-extra-high.md: replaced {critique_hits} occurrence(s)")
+    if notice_path.exists():
+        print(f"- NOTICE: replaced {notice_hits} occurrence(s)")
+    if citation_cff_path.exists():
+        print(f"- CITATION.cff: replaced {citation_hits} occurrence(s)")
     print(f"- CHANGELOG.md: {'inserted' if changelog_inserted else 'already had'} {new_version} entry")
 
     if args.dry_run:
@@ -174,6 +190,10 @@ def main(argv: list[str]) -> int:
     _write_text(readme_path, updated_readme)
     if critique_path.exists() and updated_critique is not None:
         _write_text(critique_path, updated_critique)
+    if notice_path.exists() and updated_notice is not None:
+        _write_text(notice_path, updated_notice)
+    if citation_cff_path.exists() and updated_citation is not None:
+        _write_text(citation_cff_path, updated_citation)
     _write_text(changelog_path, updated_changelog)
 
     if args.build:

@@ -6,6 +6,21 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
+## [0.7.5] - 2026-02-08
+
+### Added
+- `LICENSE` now contains the full CC BY 4.0 legal code text (for downstream reuse and institutional review).
+- `NOTICE` with a short license summary and preferred attribution format.
+- `CITATION.cff` for citation tooling support (DOI + author + license).
+
+### Changed
+- PDF front matter now includes an explicit License/Attribution page immediately after the title page.
+- Title page now includes a non-operative PRAXIS “read first” context note (DOI + GitHub) for Zenodo/PDF-only distribution.
+- `scripts/bump_version.py` now updates version strings in `NOTICE` and `CITATION.cff` as well.
+
+### Fixed
+- Rebuilt `pdf/the-open-charter.pdf` to reflect updated front matter and license text.
+
 ## [0.7.4] - 2026-02-08
 
 ### Added
