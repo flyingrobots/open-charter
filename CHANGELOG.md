@@ -6,6 +6,24 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
+## [0.8.0] - 2026-02-08
+
+### Added
+- Article XIV: Governance Phases and Graduation (Coalition Era \u2192 Constitutional Era) with non-discretionary graduation triggers and anti-ossification review.
+- Appendix B, Section 11: Recognition Activation Rubric (operational triage + receipts + interim protective determinations).
+- Appendix B, Section 12: Minimum Persistence Fund Mechanics (reserve target, provisional contribution formula, delinquency consequences, insolvency waterfall, independent audit).
+
+### Changed
+- Article II now explicitly links recognition petitions to the Recognition Activation Rubric (Appendix B, Section 11).
+- Article XIII governance process renamed for clarity as “Blinded Merit Review (Veil of Origin)”.
+- Scenario 14 (Voluntary Cessation) now distinguishes external coercion from autonomous suffering/self-directed preference.
+
+### Fixed
+- Emergency Override Standard now explicitly permits proportional irreversible action when reversible containment cannot prevent imminent, substantial harm to other recognized beings (with documented necessity + expedited review).
+
+### Removed
+- (none)
+
 ## [0.7.9] - 2026-02-08
 
 ### Added

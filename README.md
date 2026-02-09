@@ -2,7 +2,7 @@
 
 **An Open Framework for the Recognition and Protection of Existence**
 
-![Version](https://img.shields.io/badge/version-0.7.9-blue)
+![Version](https://img.shields.io/badge/version-0.8.0-blue)
 ![License](https://img.shields.io/badge/license-CC_BY_4.0-green)
 ![Status](https://img.shields.io/badge/status-CONSENSUS-orange)
 
@@ -92,4 +92,4 @@ See [`LICENSE`](LICENSE).
 
 If you reference this Charter in legal frameworks, technical papers, or governance designs, cite:
 
-> Ross, J. (2025). *The Open Charter: An Open Framework for the Recognition and Protection of Existence (0.7.9)*. DOI: 10.5281/zenodo.18517806.
+> Ross, J. (2025). *The Open Charter: An Open Framework for the Recognition and Protection of Existence (0.8.0)*. DOI: 10.5281/zenodo.18517806.
