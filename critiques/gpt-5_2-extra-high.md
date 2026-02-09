@@ -1,4 +1,4 @@
-# Critique of *The Open Charter* (0.7.8) — GPT‑5.2 (extra-high)
+# Critique of *The Open Charter* (0.7.9) — GPT‑5.2 (extra-high)
 
 **Reviewer:** GPT‑5.2  
 **Date:** 2026-02-07  
@@ -212,7 +212,7 @@ These additions push the Charter from “anti-tyranny by rule” toward “anti-
 ## Repo / Document Hygiene Notes (Non-Philosophical, Fixable)
 
 - Canonical source is `paper/charter_body.tex`; the `paper/charter_body.patched.tex` variant has been removed to prevent drift.
-- Version metadata now has a single source of truth (`paper/charter_meta.tex`); the current unreleased draft is version `0.7.8`.
+- Version metadata now has a single source of truth (`paper/charter_meta.tex`); the current unreleased draft is version `0.7.9`.
 - `paper/refs.bib` is populated and the PDF build now includes a “Works Cited” section; non-cited background lives in “Further Reading.”
 - The “Full Stack Architecture” references WARP; the README now links to the AIΩN Foundations series (WARP) and the PDF cites Paper I–II as technical foundations (Implementation Annex).
 

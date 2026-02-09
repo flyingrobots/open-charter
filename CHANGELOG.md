@@ -6,6 +6,21 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
+## [0.7.9] - 2026-02-08
+
+### Added
+- Appendix D: Threat Model Summary (PRAXIS Bridge) to make the threat model legible without requiring a PRAXIS full read on first pass.
+- Appendix C Scenarios 13--15: Cross-Jurisdiction Conflict, Voluntary Cessation Request, and Adversarial Adoption.
+
+### Changed
+- Renumbered Governance and Implementation References from Appendix D to Appendix E.
+
+### Fixed
+- Strengthened review and adoption robustness by explicitly stress-testing cross-jurisdiction disputes and adversarial “compliance” postures (Appendix C).
+
+### Removed
+- (none)
+
 ## [0.7.8] - 2026-02-08
 
 ### Added
