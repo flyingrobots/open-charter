@@ -1,0 +1,64 @@
+% !TeX program = pdflatex
+% --------------------------------------------------------------------
+% The Open Charter — Suite Map (README)
+% --------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+% 1) Packages first ---------------------------------------------------
+% Some editors run `pdflatex paper/charter-suite-map.tex` from the repo root,
+% while the Makefile builds from within `paper/`. Use the supported `import`
+% package plus a small base-dir detector so includes work from either working
+% directory.
+\usepackage{import}
+\newcommand{\CharterBaseDir}{paper/}
+\IfFileExists{./charter_preamble.tex}{\renewcommand{\CharterBaseDir}{./}}{}
+
+\import{\CharterBaseDir}{charter_preamble.tex}
+
+% 2) Global page/paragraph behavior next ------------------------------
+% (Defined in the shared preamble.)
+
+% 3) Custom macros/format tweaks after --------------------------------
+% ---------- Part identification (for headers + title page) ----------
+\def\SuiteDocName{Suite Map (README)}
+\def\SuiteDocVersion{\SuiteReleaseVersion}
+\def\SuiteHeaderRight{\SuiteDocVersion\space—\space Suite\space Map}
+\def\SuitePdfTitle{\CharterTitle\space — Suite Map\space (\SuiteDocVersion)}
+\def\SuiteNormativeStatus{Informational (non-normative).}
+\def\SuitePrecedence{Core > Technical Standard > Commentary}
+\def\SuiteNonDerogation{Technical Standard may not reduce protections guaranteed by Core.}
+\def\SuiteVersionLock{These documents are released as a coordinated suite under one DOI.}
+
+\begin{document}
+
+\import{\CharterBaseDir}{parts/front_title_page.tex}
+
+\FrontMatterSection{Suite Map}
+
+{\small
+
+\textbf{Files in this release:}
+\begin{itemize}[itemsep=0.2em, topsep=0.2em, leftmargin=2em]
+  \item \textbf{Core Charter (Constitutional Core)} — \textit{normative, canonical}. Source of truth for rights claims and binding obligations.
+  \item \textbf{Technical Standard} — \textit{normative, subordinate}. Operational requirements, procedures, and audit artifacts implementing the Core.
+  \item \textbf{Commentary \& Rationale} — \textit{non-normative}. Interludes, design rationale, historical parallels, and scenario walkthroughs.
+\end{itemize}
+
+\textbf{Precedence and legal force:}
+\begin{itemize}[itemsep=0.2em, topsep=0.2em, leftmargin=2em]
+  \item \textbf{Precedence:} Core > Technical Standard > Commentary.
+  \item \textbf{Non-derogation:} The Technical Standard may not reduce protections guaranteed by the Core.
+  \item \textbf{Version lock:} The Technical Standard is expected to evolve faster than the Core; each release should declare the Core version range it is compatible with.
+\end{itemize}
+
+\textbf{How to cite:}
+\begin{itemize}[itemsep=0.2em, topsep=0.2em, leftmargin=2em]
+  \item Cite \textbf{Core} for rights claims and binding obligations.
+  \item Cite \textbf{Technical Standard} for operational/compliance claims and auditable procedures.
+  \item Cite \textbf{Commentary} for rationale, interpretation, and scenario analysis.
+\end{itemize}
+
+}
+
+\end{document}

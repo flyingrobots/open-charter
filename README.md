@@ -1,95 +1,80 @@
 # The Open Charter
 
-**An Open Framework for the Recognition and Protection of Existence**
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18517806.svg)](https://doi.org/10.5281/zenodo.18517806)
 
-![Version](https://img.shields.io/badge/version-0.8.1-blue)
-![License](https://img.shields.io/badge/license-CC_BY_4.0-green)
-![Status](https://img.shields.io/badge/status-CONSENSUS-orange)
+> This repository is the public artifact/source archive for the published **Consensus Edition 0.8.1** of *The Open Charter*.
 
-> "That which can be instantiated can be harmed. That which can be harmed must be protected."
+The Open Charter is a constitutional governance framework for coordinating rights, safety, and accountability across biological, digital, and hybrid forms of intelligence.
 
-## Read This First (Strong Recommendation)
+The suite is structured as four interoperable documents: Core (normative constitutional text), Technical Standard (operational implementation requirements), Commentary (interpretive rationale and edge-case analysis), and Suite Map (document hierarchy and usage guidance).
 
-Before reading the Charter, read **PRAXIS**.
+This edition formalizes phased governance graduation criteria, defines founding procedures for metric legitimacy and anti-dominance protections, strengthens non-derogation and compatibility constraints, and codifies enforceable safeguards including quarantine-first containment, reversible intervention standards, auditable proof-of-effect obligations, and rights-preserving memory/identity protections.
 
-PRAXIS is the scenario and threat-model this document is responding to: coordination-as-gravity, preference capture, consent theater, emergent immune systems, and the slow conversion of “help” into structural lock-in.
+The Charter is designed to be forkable, auditable, and implementation-ready: legally legible at the constitutional layer, technically testable at the systems layer, and adaptable under explicit anti-ossification review.
 
-- PRAXIS (DOI): [PRAXIS](https://doi.org/10.5281/zenodo.18206427)
-- PRAXIS (source + updates): [GitHub](https://github.com/flyingrobots/praxis)
+It is published as a public-interest framework for institutions, researchers, developers, and governance bodies working on advanced AI and post-human coordination.
 
-If you read PRAXIS first, the Charter reads less like “ethics” and more like a constitution written for the moment coordination becomes destiny.
+> [!note]
+> ## Read First (Highly Recommended)
+>
+> Before reading The Open Charter, read *PRAXIS*:
+>
+> - https://doi.org/10.5281/zenodo.18206427 (or, https://github.com/flyingrobots/praxis)
 
-## Quick Links
+---
 
-- Latest compiled PDF: [`pdf/the-open-charter.pdf`](pdf/the-open-charter.pdf)
-- Changelog: [`CHANGELOG.md`](CHANGELOG.md)
-- License (CC BY 4.0): [`LICENSE`](LICENSE)
+## Canonical Release Artifacts
 
-## What This Repo Is
+- Core Charter (normative): `pdf/the-open-charter-core.pdf`
+- Technical Standard (normative, subordinate to Core):
+  `pdf/the-open-charter-technical-standard.pdf`
+- Commentary and Rationale (non-normative):
+  `pdf/the-open-charter-commentary.pdf`
+- Suite Map (non-normative guide): `pdf/the-open-charter-suite-map.pdf`
+- Combined suite PDF: `pdf/the-open-charter.pdf`
 
-This repository contains the canonical LaTeX source and compiled PDF for *The Open Charter*.
+## Canonical Source
 
-The Charter is written to be:
+- Entry points: `paper/main.tex`, `paper/charter-core.tex`,
+  `paper/charter-technical-standard.tex`, `paper/charter-commentary.tex`,
+  `paper/charter-suite-map.tex`
+- Shared metadata: `paper/charter_meta.tex`
+- Structured section files: `paper/parts/*.tex`
+- Bibliography: `paper/refs.bib`
 
-- **Substrate-neutral:** protections apply to biological, synthetic, hybrid, and xenobiological beings.
-- **Law-shaped:** obligations are phrased to be adjudicable (“shall”, standards of review, defined terms).
-- **Adversary-aware:** the failure mode is not only overt harm, but coerced completion, engineered dependence, and governance capture.
-
-## Suggested Reading Order
-
-1. **PRAXIS** (links above).
-2. The PDF: [`pdf/the-open-charter.pdf`](pdf/the-open-charter.pdf).
-3. The canonical source: [`paper/charter_body.tex`](paper/charter_body.tex) (content) and [`paper/main.tex`](paper/main.tex) (typesetting).
-4. Appendix B/C inside the paper (controls + stress tests) if you care about implementation.
-
-## The “Stack” (Context → Law → Physics)
-
-This project is easiest to understand as three layers:
-
-1. **Context (PRAXIS):** what goes wrong when coordination becomes irresistible.
-2. **Law (The Charter):** rights, duties, and governance constraints.
-3. **Physics (Deterministic Provenance):** reference work on replay, provenance, and worldlines (WARP Graphs papers):
-   - [Paper I](https://doi.org/10.5281/zenodo.17908005)
-   - [Paper II](https://doi.org/10.5281/zenodo.17934512)
-   - [Paper III](https://doi.org/10.5281/zenodo.17963669)
-   - [Paper IV](https://doi.org/10.5281/zenodo.18038297)
-   - [Paper V](https://doi.org/10.5281/zenodo.18146884)
-
-The Charter does **not** require WARP exclusivity in constitutional text; WARP is treated as a reference implementation, with allowance for formally equivalent provenance systems.
-
-## Building the PDF
-
-Build output is written to `pdf/the-open-charter.pdf`.
+## Build
 
 Requirements:
 
-- a LaTeX distribution (e.g., TeX Live)
+- TeX Live (or equivalent LaTeX distribution)
 - `latexmk`
+- `make`
 
 Commands:
 
-- Build: `make`
-- Clean: `make clean`
+- Build all release PDFs: `make`
+- Build Zenodo upload set (split documents): `make zenodo`
+- Build combined source dump: `make sources`
+- Clean build artifacts: `make clean`
 
-Publication bar: **no LaTeX warnings/errors** (check `pdf/the-open-charter.log`).
+## Publication Metadata
 
-## Versioning, Changelog, and Release Hygiene
-
-Version is a single source of truth in LaTeX (`paper/charter_meta.tex`), but also appears in documentation. Use the bump script to keep everything consistent:
-
-- Bump version: `python3 scripts/bump_version.py --patch` (or `--minor`, `--major`)
-- Bump + rebuild PDF: `python3 scripts/bump_version.py --patch --build`
-
-Changes are tracked in [`CHANGELOG.md`](CHANGELOG.md).
-
-## License
-
-This project is licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
-
-See [`LICENSE`](LICENSE).
+- Version: `0.8.1`
+- DOI: [`10.5281/zenodo.18517806`](https://doi.org/10.5281/zenodo.18517806)
+- ORCID: [`0009-0006-0025-7801`](https://orcid.org/0009-0006-0025-7801)
 
 ## Citation
 
-If you reference this Charter in legal frameworks, technical papers, or governance designs, cite:
+Please cite as: 
 
-> Ross, J. (2025). *The Open Charter: An Open Framework for the Recognition and Protection of Existence (0.8.1)*. DOI: 10.5281/zenodo.18517806.
+> Ross, J. (2026). The Open Charter: An Open Framework for the Recognition and Protection of Existence (v0.8.1). Zenodo. https://doi.org/10.5281/zenodo.18517806
+
+Also available in [`CITATION.cff`](CITATION.cff).
+
+## License
+
+Licensed under **Creative Commons Attribution 4.0 International (CC BY 4.0)**.
+
+See `LICENSE` for full terms and `NOTICE` for preferred attribution language.
+
+Copyright © 2025–2026 James Ross

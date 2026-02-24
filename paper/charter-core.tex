@@ -1,0 +1,34 @@
+% !TeX program = pdflatex
+% --------------------------------------------------------------------
+% The Open Charter — Constitutional Core
+% --------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+% 1) Packages first ---------------------------------------------------
+% Some editors run `pdflatex paper/charter-core.tex` from the repo root, while
+% the Makefile builds from within `paper/`. Use the supported `import` package
+% plus a small base-dir detector so includes work from either working directory.
+\usepackage{import}
+\newcommand{\CharterBaseDir}{paper/}
+\IfFileExists{./charter_preamble.tex}{\renewcommand{\CharterBaseDir}{./}}{}
+
+\import{\CharterBaseDir}{charter_preamble.tex}
+
+% 2) Global page/paragraph behavior next ------------------------------
+% (Defined in the shared preamble.)
+
+% 3) Custom macros/format tweaks after --------------------------------
+% ---------- Part identification (for headers + title page) ----------
+\def\SuiteDocName{Core Charter (Constitutional Core)}
+\def\SuiteDocVersion{\CoreVersion}
+\def\SuiteHeaderRight{\SuiteDocVersion\space—\space Core}
+\def\SuitePdfTitle{\CharterTitle\space — Core Charter\space (\SuiteDocVersion)}
+\def\SuiteNormativeStatus{Normative (canonical constitutional text).}
+\def\SuitePrecedence{Core > Technical Standard > Commentary}
+\def\SuiteNonDerogation{No subordinate instrument may reduce protections guaranteed by the Core.}
+\def\SuiteVersionLock{Technical Standard versions must declare compatibility with this Core.}
+
+\begin{document}
+\import{\CharterBaseDir}{charter_core_body.tex}
+\end{document}

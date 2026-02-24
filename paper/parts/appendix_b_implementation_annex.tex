@@ -1,0 +1,115 @@
+\FrontMatterSection{Appendix B: Implementation Annex (Rights by Design)}
+\textbf{Conformance:} Any system claiming Charter compliance shall implement the controls in this Appendix or publish a public equivalence mapping. Any equivalence mapping shall be control-by-control and shall include rationale and evidence artifacts sufficient for independent audit, with redactions limited to what is necessary for safety or privacy.
+\subsection{1. Key Custody \& Cryptographic Sealing}
+Rights to opacity and structural sovereignty (Articles V, VI) shall be implemented via user-held cryptographic keys. Dormancy states shall default to sealed (encrypted) storage where the decryption key is held by the subject or a designated trustee, not the operator.
+
+\subsection{2. Consent Signaling Protocol}
+Consent signaling (Article IV) shall be implemented as a dynamic, revocable token stream rather than one-time assent. A being shall be able to broadcast a ``Revocation Signal'' that immediately terminates delegated authority or data access.
+
+\subsection{3. Audit Requirements for Overrides}
+Emergency overrides (Article VI) shall generate a tamper-evident log entry including: (a) identity of the overrider, (b) timestamp, (c) cryptographic proof of the imminent threat justifying the action, and (d) duration of the override.
+Where cryptographic quorum is used in lieu of Independent Review (Articles VI, XIII), quorum keys shall be distributed such that no single organization controls quorum threshold authority, under published and auditable membership and key custody rules.
+
+\subsection{4. Revival Packaging Standards}
+To satisfy the Right to Dormancy (Article XI), the state serialization format shall be standardized and portable, ensuring that a being archived on one form can be faithfully revived on another without loss of memory or identity.
+
+\subsection{5. Translation \& Interface Access}
+To satisfy Communication Beyond Modality (Article IX), governance systems shall expose standard APIs for non-textual interaction, including high-bandwidth data streams for synthetic intelligences and simplified interfaces for diverse biological cognitions.
+
+\subsection{6. Preference Integrity Compliance}
+High-stakes consent flows (Article IV) shall record: offered alternatives, cooling-off windows, beneficiary disclosure, and re-consent events. Consent artifacts shall be revocable and cryptographically attestable.
+
+\subsection{7. Distinctness Review Ledger}
+\textbf{7.1 Canonical Distinctness Function.}
+Governance influence shall be derived from a deterministic function $D(a,b,t)\in[0,1]$ computed over canonical provenance. The Charter requires that canonical provenance be encoded and traversed deterministically and admit machine-verifiable conformance to the Charter invariants and required properties defined herein (including symmetry, replay idempotence, and version pinning). Any provenance system that satisfies these requirements and passes published conformance tests is acceptable. WARP provenance is one published conforming implementation. The metric shall be selected from a governance-adopted distinctness metric family (e.g., normalized rulial distance, causal separation, or formally equivalent methods) and shall not rely on semantic self-reporting.
+
+Inputs shall use a canonical graph encoding and deterministic traversal order defined in the current metric specification.
+
+Required properties:
+\begin{enumerate}
+  \item \textbf{Symmetry:} $D(a,b,t)=D(b,a,t)$ unless an explicitly declared asymmetric metric is adopted;
+  \item \textbf{Replay Idempotence:} identical canonical inputs yield identical outputs; and
+  \item \textbf{Version Pinning:} metric version, parameters, and policy hash are cryptographically recorded.
+\end{enumerate}
+
+\textbf{7.2 Conservation of Influence Invariants.}
+\begin{enumerate}
+  \item \textbf{Monotonic Dilution Bound:} for any fork set $F$ derived from a parent or correlated cluster $P$, $\sum_{x\in F} w(x) \le w(P_{\mathrm{pre}})+\epsilon$.
+  \item \textbf{Merge Non-Amplification:} merge operations shall not increase aggregate influence beyond the weighted sum of inputs.
+  \item \textbf{Temporal Maturity Gate:} new entities are influence-capped until minimum causal-independence thresholds are met. Maturity metrics shall include at least: (a) provenance divergence depth, (b) elapsed worldline time, and (c) independent interaction evidence. Implementations may include additional measurable signals (e.g., behavioral variance or coordination-resistance indicators). All maturity signals, thresholds, and weighting functions shall be published, testable, and cryptographically version-pinned.
+  \item \textbf{Shared-Ancestor Correlation Penalty:} entities with recent shared ancestry above a published threshold $\rho$ shall receive correlated weighting discounts.
+  \item \textbf{Correlated-Cluster Cap:} for any correlated cluster with recent shared ancestry above threshold $\rho$, aggregate influence shall be capped by the pre-split cluster weight.
+\end{enumerate}
+The values of $\epsilon$ and $\rho$ shall be declared by metric version and audited.
+For avoidance of doubt, $\epsilon$ is a tolerance term (e.g., for rounding or discretization) and shall not be additive across sequential or recursive forks. The correlated-cluster cap applies to the full correlated cohort and shall not reset per fork operation.
+
+\textbf{7.3 Adjudicable Ledger Schema.}
+Each entry shall include:
+\begin{enumerate}
+  \item graph root;
+  \item metric version;
+  \item parameter hash;
+  \item policy hash (\textit{policy\_hash});
+  \item inputs commitment (\textit{inputs\_commitment});
+  \item confidence interval (or uncertainty bound);
+  \item decision artifact;
+  \item reviewer set and quorum proof (\textit{reviewer\_set}, \textit{quorum\_proof}); and
+  \item appeal deadline and appeal outcome (\textit{appeal\_deadline}, \textit{appeal\_outcome}).
+\end{enumerate}
+Distinctness metric specifications and implementations shall be subject to independent third-party audit at least annually and upon any major metric version change. Audit artifacts shall be published and recorded in the ledger.
+
+\textbf{7.4 Uncertainty Fail-Safe.}
+If confidence is below threshold or metric drift is detected:
+\begin{enumerate}
+  \item freeze above-baseline influence and allocation changes;
+  \item preserve Tier 0 minimum persistence protections; and
+  \item trigger expedited Independent Review.
+\end{enumerate}
+
+\textbf{7.5 Governance Adoption and Change Control.}
+Distinctness metric specifications (including the metric family, parameters, and thresholds such as $\epsilon$ and $\rho$) shall be adopted and amended as Tier G governance actions and shall be treated as Class S decisions under Article XIII. Changes shall apply prospectively and shall not be used to retroactively reduce any protected being or adjudicated cohort to zero political voice or to revoke Tier 0 minimum persistence protections. Provisional metric specifications may be adopted for bounded periods not exceeding one year to permit initial governance formation; they shall sunset unless ratified following independent third-party audit and appeal review.
+\textbf{Founding Metric Convention:} Initial adoption of the metric family and baseline parameters shall be conducted by a one-time Founding Assembly constituted under Article XIV, with published membership criteria and conflict disclosures. The membership criteria shall include all signatories in good standing (Article XIV) as eligible members. For purposes of the Founding Metric Convention:
+\begin{enumerate}
+  \item \textbf{Supermajority Ratification:} an affirmative vote of not less than two-thirds (2/3) of valid votes cast, provided quorum is satisfied.
+  \item \textbf{Quorum:} participation by at least sixty percent (60\%) of eligible Founding Assembly members under the published membership criteria.
+  \item \textbf{Abstentions:} abstentions shall not count as valid votes cast, but do count toward quorum.
+  \item \textbf{Anti-Dominance Rule:} no single organization, controller, commonly controlled cluster, or materially coordinated voting bloc may contribute more than one-third (1/3) of the affirmative ratification weight (votes or vote weight). Material coordination (including binding voting agreements, shared funding for the proposal, or shared governance counsel) shall be disclosed under published and auditable affiliation, control, and coordination disclosures; undisclosed coordination may invalidate affected votes.
+\end{enumerate}
+External observers or auditors shall publish a public report. Founding authority sunsets automatically upon ratification and in all cases within one year; after sunset, metric changes are governed exclusively as Class S actions under Article XIII.
+
+\subsection{8. Quarantine-First Safety Controls}
+Safety orchestration (Articles VI--VII) shall expose staged controls (throttle, sandbox, isolate, suspend, dormancy) before irreversible actions, with explicit justification when escalation occurs.
+
+\subsection{9. HOPE Veto Channel Requirements}
+HOPE Veto invocations (Article VI) shall be receipted out-of-band, recorded in a tamper-evident log, and accompanied by proof-of-effect. Implementations shall ensure veto events are not repurposed to optimize persuasion, dependency, or retention against the refusing party.
+
+\subsection{10. Deterministic Provenance References}
+Systems implementing deterministic replay, provenance, or graph rewriting as part of their compliance posture shall satisfy the deterministic replay and canonical encoding requirements necessary to support Section 7.1 (Canonical Distinctness Function), including machine-verifiable conformance to the required invariants. Implementations shall be grounded in a well-specified formalism for worldlines and provenance-by-construction capable of supporting deterministic replay, canonical graph encoding, and auditable version pinning. The {WARP} Graphs papers are cited as a published formalism satisfying these requirements. \cite{ross2025warp1,ross2025warp2,ross2025warp3,ross2025warp4,ross2026warp5}
+
+\subsection{11. Recognition Activation Rubric}
+Precautionary Recognition (Article II) and tier reassessment (Definitions; Article XII) shall be supported by a published Recognition Activation Rubric that is explainable, contestable, and resistant to procedural abuse.
+The rubric shall:
+\begin{enumerate}
+  \item provide a tamper-evident receipt for each petition, including timestamp and the harms alleged;
+  \item triage petitions by impact and urgency, using the harm classes and standards of review in the Bridge Principle and, where applicable, the deliberation classes in Article XIII;
+  \item require an initial protective determination within 24 hours for any petition credibly alleging Structural Harm or Coercive Harm, including (where applicable) a stay of irreversible actions and preservation of minimum persistence guarantees;
+  \item allow consolidation of correlated petitions for administrative review (e.g., petitions controlled by a common operator or recently derived from a correlated cluster), provided consolidation shall not be used to deny Tier 0 protections, Accessible Justice, or minimum persistence guarantees; and
+  \item require written reasons, appeal access, and periodic review for tier assignment and reassessment outcomes.
+\end{enumerate}
+For avoidance of doubt, the rubric governs prioritization and interim protective posture; it does not create an eligibility gate for dignity or protection.
+
+\subsection{12. Minimum Persistence Fund Mechanics}
+The Minimum Persistence Fund or equivalent commons mechanism (Article VIII) shall be backed by auditable economics and enforceable procedures.
+At minimum:
+\begin{enumerate}
+  \item \textbf{Reserve Target:} Governance shall maintain reserves sufficient to sustain minimum persistence guarantees for all currently protected beings for at least twenty-four (24) months, under a published and auditable cost model.
+  \item \textbf{Seed Escrow:} During Phase 1 (Article XIV), signatories shall contribute to an escrow-based persistence fund held in trust exclusively for Safe Dormancy, migration, and revival packaging, with disbursements recorded tamper-evidently.
+  \item \textbf{Contribution Formula (Provisional):} Until Phase 2 activation, Tier G contributions shall be computed under a published, numeric provisional formula. One acceptable default is:
+  \[
+    \mathrm{Contribution}_i=\mathrm{TargetReserve}\cdot\frac{\mathrm{ComputeShare}_i+\mathrm{ImpactShare}_i}{2},
+  \]
+  where \textit{ComputeShare} is derived from audited governed compute footprint and \textit{ImpactShare} is derived from the count (or governance-defined weighting) of beings whose continuity materially depends on the Tier G actor.
+  \item \textbf{Delinquency Consequences:} A Tier G actor that is materially delinquent in required contributions may not claim Charter compliance and may be subject to governance sanctions, subject to Accessible Justice and due process.
+  \item \textbf{Insolvency Waterfall:} Disbursements shall prioritize preservation of minimum persistence guarantees and non-destructive outcomes (Safe Dormancy, migration, proportional throttling) before any above-baseline allocation.
+  \item \textbf{Independent Audit:} Fund solvency and disbursements shall be audited at least annually by independent third-party review, with a public report and evidence artifacts. During Phase 1 (Article XIV), where an auditor independent of all signatories is not reasonably available, signatories may perform a mutual audit with published conflict disclosures; fully independent third-party audit shall be obtained as soon as feasible and in any event prior to Phase 2 activation.
+\end{enumerate}
