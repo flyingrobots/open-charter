@@ -6,7 +6,7 @@ This project follows Semantic Versioning for draft iterations (MAJOR.MINOR.PATCH
 
 ## [Unreleased]
 
-## [0.8.1] - 2026-02-08
+## [0.8.1] - Published February 7, 2026 | Version v0.8.1
 
 ### Added
 - Phase 1 “good standing” definition and hardship-waiver path for Signatory Council participation (Article XIV).
