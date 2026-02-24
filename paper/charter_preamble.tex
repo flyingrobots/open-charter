@@ -1,0 +1,95 @@
+% Shared LaTeX styling for The Open Charter suite.
+%
+% This file intentionally excludes:
+% - \documentclass
+% - \begin{document} / \end{document}
+
+% 1) Packages first ---------------------------------------------------
+% ---------- Page Geometry ----------
+\usepackage[
+  paper=a4paper,
+  top=1.20in,
+  bottom=1.20in,
+  left=1.35in,
+  right=1.35in,
+  headheight=15pt
+]{geometry}
+
+% ---------- Typography ----------
+\usepackage[T1]{fontenc}
+\usepackage{libertinus}
+\usepackage{microtype}
+
+% ---------- PDF metadata + links ----------
+\PassOptionsToPackage{hidelinks,hypertexnames=false}{hyperref}
+\usepackage{hyperref}
+\usepackage{xurl}
+\usepackage{bookmark}
+\usepackage{orcidlink}
+
+% ---------- Section Styling ----------
+\usepackage{titlesec}
+
+% ---------- Lists ----------
+\usepackage{enumitem}
+
+% ---------- Header / Footer ----------
+\usepackage{fancyhdr}
+
+% 2) Global page/paragraph behavior next ------------------------------
+\raggedbottom
+\widowpenalty=10000
+\clubpenalty=10000
+\displaywidowpenalty=10000
+\emergencystretch=2em
+
+% Paragraph feel
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.6em}
+
+% 3) Custom macros/format tweaks after --------------------------------
+% TOC setup:
+% - Keep section counters enabled so hyperref gets stable, unique anchors.
+% - Hide section numbers in both headings and the TOC (article numbers are
+%   part of the titles themselves via \Article{...}{...}).
+\setcounter{secnumdepth}{2}
+\setcounter{tocdepth}{2}
+\makeatletter
+\renewcommand*\numberline[1]{}
+\makeatother
+
+\titleformat{\section}
+  {\normalfont\scshape\Large\centering}
+  {}
+  {0pt}
+  {}
+\titleformat{\subsection}
+  {\normalfont\scshape\large}
+  {}
+  {0pt}
+  {}
+
+\titlespacing*{\section}{0pt}{2.8em}{1.2em}
+\titlespacing*{\subsection}{0pt}{1.7em}{0.6em}
+
+\setlist[itemize]{itemsep=0.4em, topsep=0.4em, leftmargin=2em}
+\setlist[enumerate]{itemsep=0.4em, topsep=0.4em, leftmargin=2.2em}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyfoot[C]{\thepage}
+
+% ---------- Metadata ----------
+% Keep content edits out of the entrypoint files: update `charter_meta.tex`.
+% `charter_meta.tex` defines \Suite* fields, version/DOI identifiers, and an
+% automatic \AtBeginDocument hook that applies headers + PDF metadata.
+\input{charter_meta}
+
+% ---------- Macros ----------
+\newcommand{\Article}[2]{%
+  \subsection{Article #1 — #2}%
+}
+\newcommand{\FrontMatterSection}[1]{%
+  \section{#1}%
+}

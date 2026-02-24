@@ -1,15 +1,22 @@
-# LaTeX build artifacts
+# macOS / editor noise
 .DS_Store
+.obsidian/
+.vscode/
+
+# local drafting material not part of published artifacts
+critiques/
+
+# LaTeX build artifacts
 *.aux
 *.bbl
 *.blg
+*.fdb_latexmk
+*.fls
 *.log
 *.out
-*.toc
 *.synctex.gz
-*.fls
-*.fdb_latexmk
-*.pdf
+*.toc
 
-# Keep the compiled PDF (Makefile output) in-repo
+# Keep release PDFs in-repo
+*.pdf
 !pdf/*.pdf

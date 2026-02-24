@@ -1,7 +1,7 @@
 % Charter metadata for The Open Charter.
 %
 % Edit this file when changing title/subtitle/version/keywords or adopter.
-% The styling/preamble lives in `main.tex`.
+% The styling/preamble lives in `charter_preamble.tex`.
 
 \newcommand{\CharterTitle}{The Open Charter}
 \newcommand{\CharterSubtitle}{An Open Framework for the Recognition and Protection of Existence}
@@ -9,12 +9,76 @@
 \newcommand{\CharterDate}{February 7, 2026}
 \newcommand{\CharterAdopter}{James Ross}
 
-\fancyhead[L]{\textsc{\CharterTitle}}
-\fancyhead[R]{\textsc{\CharterVersion}}
+% ---------- Versioning (suite vs parts) ----------
+% The suite has a single release version (Zenodo deposition version).
+% Individual parts may evolve at different cadences; give them explicit IDs.
+\newcommand{\SuiteReleaseVersion}{\CharterVersion}
+\providecommand{\CoreVersion}{\SuiteReleaseVersion}
+\providecommand{\TechnicalStandardVersion}{\SuiteReleaseVersion}
+\providecommand{\TechnicalStandardId}{TS-\TechnicalStandardVersion}
+\providecommand{\CommentaryVersion}{\SuiteReleaseVersion}
+\providecommand{\SuiteDocVersion}{\SuiteReleaseVersion}
 
-\hypersetup{
-  pdftitle={\CharterTitle},
-  pdfauthor={\CharterAdopter},
-  pdfsubject={Charter; rights; AI safety; synthetic intelligence; consciousness; xenobiology},
-  pdfkeywords={sovereignty, AI rights, substrate-independence, ethical creation, open charter, non-human rights},
+% ---------- Identifiers (DOI / ORCID) ----------
+\newcommand{\AuthorORCID}{0009-0006-0025-7801}
+
+% Zenodo uses a concept DOI (all versions) and a version DOI (this release).
+% Set the concept DOI when known; leave blank to omit it from output.
+\providecommand{\SuiteZenodoVersionDOI}{10.5281/zenodo.18517806}
+\providecommand{\SuiteZenodoConceptDOI}{}
+
+\newcommand{\ORCID}{%
+  \orcidlink{\AuthorORCID}\,
+  \href{https://orcid.org/\AuthorORCID}{\AuthorORCID}%
 }
+
+\newcommand{\VersionDOI}{%
+  DOI: \href{https://doi.org/\SuiteZenodoVersionDOI}{\SuiteZenodoVersionDOI}%
+}
+
+\newcommand{\ConceptDOI}{%
+  Concept DOI: \href{https://doi.org/\SuiteZenodoConceptDOI}{\SuiteZenodoConceptDOI}%
+}
+
+\newcommand{\DOI}{%
+  \VersionDOI%
+  \if\relax\SuiteZenodoConceptDOI\relax
+  \else
+    \\\ConceptDOI%
+  \fi
+}
+
+% ---------- Suite/Part Metadata (override per entrypoint) ----------
+% These are intended to be set per document by defining them before
+% `\input{charter_preamble}` in the entrypoint `.tex`.
+\providecommand{\SuiteDocName}{Suite (All Documents)}
+\providecommand{\SuiteNormativeStatus}{Mixed: Core and Technical Standard are normative; Commentary is non-normative.}
+\providecommand{\SuitePrecedence}{Core > Technical Standard > Commentary}
+\providecommand{\SuiteNonDerogation}{Technical Standard may not reduce protections guaranteed by Core.}
+\providecommand{\SuiteVersionLock}{Technical Standard versions must declare compatibility with the Core.}
+
+% Headers and PDF metadata may be overridden per part as well.
+\providecommand{\SuiteHeaderLeft}{\CharterTitle}
+\providecommand{\SuiteHeaderRight}{\SuiteDocVersion}
+\providecommand{\SuitePdfTitle}{\CharterTitle}
+
+% Apply suite/part metadata to headers + PDF info.
+%
+% Important: This is a function, not an eager side-effect, so entrypoints can:
+% 1) load shared packages/styles first (charter_preamble.tex),
+% 2) override \Suite* fields for this specific document,
+% 3) then call \CharterApplyMeta.
+\newcommand{\CharterApplyMeta}{%
+  \fancyhead[L]{\textsc{\SuiteHeaderLeft}}%
+  \fancyhead[R]{\textsc{\SuiteHeaderRight}}%
+  \hypersetup{%
+    pdftitle={\SuitePdfTitle},%
+    pdfauthor={\CharterAdopter},%
+    pdfsubject={Charter; rights; AI safety; synthetic intelligence; consciousness; xenobiology},%
+    pdfkeywords={sovereignty, AI rights, substrate-independence, ethical creation, open charter, non-human rights},%
+  }%
+}
+
+% Make the metadata application foolproof: entrypoints override \Suite* fields
+% in the preamble, and this runs automatically when the document begins.
+\AtBeginDocument{\CharterApplyMeta}

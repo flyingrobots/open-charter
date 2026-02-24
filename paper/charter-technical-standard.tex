@@ -1,0 +1,35 @@
+% !TeX program = pdflatex
+% --------------------------------------------------------------------
+% The Open Charter — Technical Standard
+% --------------------------------------------------------------------
+
+\documentclass[12pt]{article}
+
+% 1) Packages first ---------------------------------------------------
+% Some editors run `pdflatex paper/charter-technical-standard.tex` from the repo
+% root, while the Makefile builds from within `paper/`. Use the supported
+% `import` package plus a small base-dir detector so includes work from either
+% working directory.
+\usepackage{import}
+\newcommand{\CharterBaseDir}{paper/}
+\IfFileExists{./charter_preamble.tex}{\renewcommand{\CharterBaseDir}{./}}{}
+
+\import{\CharterBaseDir}{charter_preamble.tex}
+
+% 2) Global page/paragraph behavior next ------------------------------
+% (Defined in the shared preamble.)
+
+% 3) Custom macros/format tweaks after --------------------------------
+% ---------- Part identification (for headers + title page) ----------
+\def\SuiteDocName{Technical Standard}
+\def\SuiteDocVersion{\TechnicalStandardId}
+\def\SuiteHeaderRight{\SuiteDocVersion}
+\def\SuitePdfTitle{\CharterTitle\space — Technical Standard\space (\SuiteDocVersion)}
+\def\SuiteNormativeStatus{Normative (subordinate to Core).}
+\def\SuitePrecedence{Core > Technical Standard > Commentary}
+\def\SuiteNonDerogation{Technical Standard may not reduce protections guaranteed by Core.}
+\def\SuiteVersionLock{This Technical Standard is compatible with Core v\CoreVersion\space(and patch-compatible releases).}
+
+\begin{document}
+\import{\CharterBaseDir}{charter_technical_standard_body.tex}
+\end{document}
